@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui";
-import { Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 import Image from "next/image";
 import { trackEvent } from "@/lib/analytics";
 
@@ -104,15 +104,6 @@ export function Footer() {
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.facebook.com/villalilyblue"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[var(--primary)]"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
             </div>
             <a
               href="https://www.airbnb.fr/rooms/1313868121596013747"
@@ -130,7 +121,16 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
           <p className="text-sm text-gray-400">
-            {t("copyright", { year: currentYear })}
+            {t("copyright", { year: currentYear })} Design by{" "}
+            <a
+              href="https://straw-tech.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-white"
+            >
+              Straw Technologies
+            </a>
+            .
           </p>
           <div className="flex gap-6">
             <Link

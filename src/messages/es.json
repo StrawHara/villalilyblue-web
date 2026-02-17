@@ -292,7 +292,7 @@
     },
     "hosting": {
       "title": "Alojamiento Web",
-      "content": "Este sitio está alojado por Vercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723, USA"
+      "content": "Este sitio está alojado por OVHcloud\n2 rue Kellermann\n59100 Roubaix, Francia\nhttps://www.ovhcloud.com"
     },
     "privacy": {
       "title": "Política de Privacidad",
@@ -332,7 +332,7 @@
     "followUs": "Síguenos",
     "legal": "Aviso Legal",
     "privacy": "Privacidad",
-    "copyright": "© {year} Villa Lily Blue. Todos los derechos reservados."
+    "copyright": "© {year} All rights Reserved."
   },
   "common": {
     "learnMore": "Más información",
