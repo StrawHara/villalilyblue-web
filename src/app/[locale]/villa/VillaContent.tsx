@@ -40,6 +40,9 @@ export function VillaContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <div className="mb-3 inline-flex items-center rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
+              {t("renovatedBadge")}
+            </div>
             <h1 className="mb-4 text-4xl font-bold md:text-6xl">{t("title")}</h1>
             <p className="text-xl text-white/90 md:text-2xl">{t("subtitle")}</p>
           </motion.div>
@@ -79,6 +82,9 @@ export function VillaContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+              <h2 className="mb-6 text-3xl font-bold text-[var(--secondary)]">
+                {t("subtitle")}
+              </h2>
               <p className="text-lg leading-relaxed text-gray-600">
                 {t("description")}
               </p>

@@ -12,7 +12,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t("title"),
-    description: t("subtitle"),
+    description: t("metaDescription"),
+    keywords: t("metaKeywords"),
+    alternates: {
+      canonical: `/${locale}/amenities`,
+      languages: { fr: "/fr/amenities", en: "/en/amenities", es: "/es/amenities" },
+    },
+    openGraph: {
+      title: `${t("title")} | Villa Lily Blue`,
+      description: t("metaDescription"),
+      url: `https://villalilyblue.com/${locale}/amenities`,
+      images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Villa Lily Blue - Anse Marcel, Saint Martin" }],
+    },
   };
 }
 

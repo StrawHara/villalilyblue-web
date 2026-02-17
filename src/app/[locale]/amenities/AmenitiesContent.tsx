@@ -47,6 +47,7 @@ export function AmenitiesContent() {
       {/* Amenities Grid */}
       <section className="py-24">
         <Container>
+          <h2 className="sr-only">{t("subtitle")}</h2>
           <div className="grid gap-8 md:grid-cols-2">
             {categories.map(({ key, icon: Icon }, index) => (
               <motion.div
@@ -83,19 +84,24 @@ export function AmenitiesContent() {
       {/* Images Section */}
       <section className="bg-gray-50 py-24">
         <Container>
+          <h2 className="sr-only">{t("title")}</h2>
           <div className="grid gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((i) => (
+            {([
+              { src: "/images/villa_lily_blue-sxm_photo-kitchen.jpg", altKey: "kitchen" },
+              { src: "/images/villa_lily_blue-sxm_photo-fitness-room.jpeg", altKey: "fitness" },
+              { src: "/images/villa_lily_blue-sxm_photo-bathroom-01.jpg", altKey: "bathroom" },
+            ] as const).map((img, i) => (
               <motion.div
-                key={i}
+                key={img.altKey}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
+                transition={{ duration: 0.4, delay: (i + 1) * 0.1 }}
                 className="relative aspect-square overflow-hidden rounded-2xl shadow-lg"
               >
                 <Image
-                  src={`/images/villa_lily_blue-sxm_photo-${i === 1 ? "kitchen" : i === 2 ? "fitness-room" : "bathroom-01"}.${i === 3 ? "jpg" : i === 2 ? "jpeg" : "jpg"}`}
-                  alt={`Équipement ${i}`}
+                  src={img.src}
+                  alt={t(`imageAlts.${img.altKey}`)}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"

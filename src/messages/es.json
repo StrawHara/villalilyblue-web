@@ -17,10 +17,13 @@
   "hero": {
     "title": "Villa Lily Blue",
     "subtitle": "Espaciosa y Elegante, Impresionante Vista al Mar",
+    "badge": "Renovada en 2024",
     "location": "Anse Marcel, Saint Martin",
     "cta": "Reserve su estancia"
   },
   "home": {
+    "metaDescription": "Villa Lily Blue: villa de lujo con vistas panorámicas al mar en Anse Marcel, Saint Martin. Piscina privada climatizada, 4 habitaciones, conserjería. Reserve sus vacaciones soñadas.",
+    "metaKeywords": "villa lujo saint martin, alquiler villa anse marcel, villa piscina privada caribe, vacaciones saint martin, villa vista mar antillas",
     "welcomeTitle": "Bienvenido a Villa Lily Blue",
     "welcomeText": "Ubicada en las alturas de Anse Marcel, Villa Lily Blue le ofrece un remanso de paz con una vista panorámica excepcional del mar Caribe. Esta villa de alto standing combina confort moderno y encanto tropical para unas vacaciones inolvidables.",
     "highlights": {
@@ -48,31 +51,34 @@
     }
   },
   "villa": {
+    "metaDescription": "Descubra Villa Lily Blue: 4 habitaciones, 4 baños, 250 m², espacios luminosos y vistas al mar. Una villa excepcional en Anse Marcel, Saint Martin.",
+    "metaKeywords": "villa 4 habitaciones saint martin, villa lujo anse marcel, alojamiento premium caribe, villa familiar antillas",
     "title": "La Villa",
     "subtitle": "Un refugio de lujo en el corazón del Caribe",
     "description": "Villa Lily Blue es una propiedad excepcional que combina elegancia arquitectónica y confort moderno. Diseñada para alojar hasta 8 huéspedes, ofrece amplios espacios de vida bañados de luz natural.",
+    "renovatedBadge": "Renovada en 2024",
     "features": {
       "bedrooms": "4 Habitaciones",
-      "bathrooms": "4 Baños",
+      "bathrooms": "5 Baños",
       "capacity": "8 Huéspedes",
       "surface": "250 m²"
     },
     "rooms": {
       "masterSuite": {
         "title": "Suite Principal",
-        "description": "Cama king size, baño privado con ducha a ras de suelo, vista al mar, acceso a la terraza."
+        "description": "Cama super king (2m de ancho), baño privado con ducha a ras de suelo, vista al mar, acceso a la terraza."
       },
       "bedroom2": {
         "title": "Habitación 2",
-        "description": "Cama queen size, baño privado, aire acondicionado, vista al jardín."
+        "description": "Cama super king (2m de ancho), baño privado, aire acondicionado, vista al jardín."
       },
       "bedroom3": {
         "title": "Habitación 3",
-        "description": "Dos camas individuales (convertibles en king), baño, ideal para niños."
+        "description": "Dos camas individuales (convertibles en super king 2m), baño, ideal para niños."
       },
       "bedroom4": {
         "title": "Habitación 4",
-        "description": "Cama queen size, baño, acceso directo a la piscina."
+        "description": "Cama super king (2m de ancho), baño, acceso directo a la piscina."
       }
     },
     "living": {
@@ -81,12 +87,14 @@
     }
   },
   "amenities": {
+    "metaDescription": "Equipamiento de Villa Lily Blue: piscina climatizada 10x5m, cocina equipada, WiFi fibra 100 Mbps, sala de fitness, aire acondicionado. Todo para una estancia perfecta en Saint Martin.",
+    "metaKeywords": "equipamiento villa saint martin, piscina climatizada privada, villa todo confort caribe, wifi fibra villa, sala fitness villa",
     "title": "Equipamiento y Servicios",
     "subtitle": "Todo para una estancia perfecta",
     "categories": {
       "pool": {
         "title": "Piscina y Exterior",
-        "items": ["Piscina climatizada privada 10x5m", "Tumbonas y sombrillas", "Ducha exterior", "Barbacoa", "Jardín tropical", "Aparcamiento privado"]
+        "items": ["Piscina climatizada privada 10x5m", "Cocina exterior y barbacoa", "Tumbonas y sombrillas", "Ducha exterior", "Jardín tropical", "Aparcamiento privado (hasta 6 vehículos)"]
       },
       "kitchen": {
         "title": "Cocina",
@@ -100,9 +108,16 @@
         "title": "Servicios Incluidos",
         "items": ["Limpieza de fin de estancia", "Ropa de cama y toallas", "Toallas de playa", "Bienvenida personalizada", "Conserjería disponible", "Guía local proporcionada"]
       }
+    },
+    "imageAlts": {
+      "kitchen": "Cocina moderna totalmente equipada de Villa Lily Blue",
+      "fitness": "Sala de fitness privada de Villa Lily Blue",
+      "bathroom": "Baño elegante de Villa Lily Blue"
     }
   },
   "gallery": {
+    "metaDescription": "Galería de fotos de Villa Lily Blue: descubra la piscina, las habitaciones, las vistas al mar, el salón y los espacios exteriores de nuestra villa en Anse Marcel, Saint Martin.",
+    "metaKeywords": "fotos villa saint martin, galería villa lujo, imágenes villa anse marcel, villa piscina vista mar",
     "title": "Galería de Fotos",
     "subtitle": "Descubra Villa Lily Blue en imágenes",
     "categories": {
@@ -146,6 +161,8 @@
     }
   },
   "location": {
+    "metaDescription": "Ubicación de Villa Lily Blue en Anse Marcel, Saint Martin. A 5 min de la playa, 10 min de Grand Case, 25 min del aeropuerto SXM. Ubicación privilegiada.",
+    "metaKeywords": "ubicación villa anse marcel, dónde está anse marcel, acceso villa saint martin, playa anse marcel distancia",
     "title": "Ubicación",
     "subtitle": "En el corazón de Anse Marcel",
     "description": "Villa Lily Blue goza de una ubicación excepcional en las alturas de Anse Marcel, una de las bahías más bellas de Saint Martin. Disfrute de una tranquilidad absoluta mientras permanece cerca de todo.",
@@ -181,6 +198,8 @@
     }
   },
   "rates": {
+    "metaDescription": "Tarifas de Villa Lily Blue en Saint Martin: desde $380/noche en temporada baja. 4 temporadas, estancia mínima de 5 noches. Solicite su presupuesto personalizado.",
+    "metaKeywords": "tarifas villa saint martin, precio alquiler villa anse marcel, coste villa lujo caribe, reserva villa antillas",
     "title": "Tarifas y Reservas",
     "subtitle": "Planifique su estancia",
     "seasons": {
@@ -219,6 +238,8 @@
     "cta": "Solicitar presupuesto"
   },
   "contact": {
+    "metaDescription": "Contacte con Villa Lily Blue para reservar su estancia en Anse Marcel, Saint Martin. Formulario de contacto, FAQ e información práctica. Respuesta en 24 horas.",
+    "metaKeywords": "contacto villa saint martin, reservar villa anse marcel, presupuesto villa lujo caribe, reservar villa antillas",
     "title": "Contáctenos",
     "subtitle": "Reserve sus vacaciones soñadas",
     "form": {
@@ -325,6 +346,7 @@
     "title": "Anse Marcel",
     "subtitle": "Una Joya Oculta del Caribe",
     "metaDescription": "Descubra Anse Marcel, una de las bahías más bellas de Saint Martin. Playa paradisíaca, puerto deportivo, restaurantes y actividades acuáticas.",
+    "metaKeywords": "anse marcel saint martin, playa anse marcel, puerto deportivo anse marcel, actividades acuáticas saint martin, bahía anse marcel",
     "intro": {
       "title": "Bienvenido a Anse Marcel",
       "description": "Ubicada en la costa noreste de Saint Martin, Anse Marcel es una bahía en forma de herradura protegida de los vientos, que ofrece aguas tranquilas y cristalinas. Es el lugar perfecto para unas vacaciones tranquilas lejos de las multitudes turísticas."
@@ -371,6 +393,7 @@
     "title": "Servicios de Conserjería",
     "subtitle": "Una estancia a su medida",
     "metaDescription": "Descubra nuestros servicios de conserjería en Villa Lily Blue: limpieza, chef privado, cuidado de niños, traslados, excursiones y mucho más.",
+    "metaKeywords": "conserjería villa saint martin, chef privado villa, servicios lujo caribe, traslado aeropuerto saint martin, excursiones saint martin",
     "intro": {
       "title": "Una conserjería a su servicio",
       "description": "Para hacer de su estancia un momento inolvidable, ofrecemos una amplia gama de servicios personalizados. Nuestro equipo local se encarga de todo, antes y durante su estancia."
@@ -481,6 +504,7 @@
     "title": "Saint Martin",
     "subtitle": "La Isla de Dos Naciones",
     "metaDescription": "Descubra Saint Martin, una isla única compartida entre Francia y los Países Bajos. Playas, gastronomía, cultura y naturaleza en el corazón del Caribe.",
+    "metaKeywords": "isla saint martin, vacaciones saint martin, playas saint martin, gastronomía caribe, restaurantes grand case, orient bay",
     "intro": {
       "title": "Bienvenido a Saint Martin",
       "description": "Saint Martin es una isla única en el mundo: compartida pacíficamente entre Francia (parte norte) y los Países Bajos (Sint Maarten, parte sur) desde 1648. Esta dualidad crea una riqueza cultural, gastronómica y turística excepcional en tan solo 87 km²."

@@ -137,9 +137,9 @@ export function Reviews({ showAll = false, locale = "fr" }: ReviewsProps) {
                   {review.author.charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[var(--secondary)]">
+                  <div className="font-semibold text-[var(--secondary)]">
                     {review.author}
-                  </h4>
+                  </div>
                   <p className="text-sm text-gray-500">{review.location}</p>
                 </div>
               </div>

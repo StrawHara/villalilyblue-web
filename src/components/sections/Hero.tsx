@@ -33,6 +33,10 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <div className="mb-3 inline-flex items-center rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
+            {t("badge")}
+          </div>
+
           <div className="mb-4 flex items-center justify-center gap-2 text-white/90">
             <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />
             <span className="text-base font-medium sm:text-lg">{t("location")}</span>

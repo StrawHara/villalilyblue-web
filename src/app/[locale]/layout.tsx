@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: t("keywords"),
     metadataBase: new URL("https://villalilyblue.com"),
     alternates: {
-      canonical: "/",
+      canonical: `/${locale}`,
       languages: {
         fr: "/fr",
         en: "/en",
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: "https://villalilyblue.com",
+      url: `https://villalilyblue.com/${locale}`,
       siteName: "Villa Lily Blue",
       locale: locale === "fr" ? "fr_FR" : locale === "es" ? "es_ES" : "en_US",
       type: "website",

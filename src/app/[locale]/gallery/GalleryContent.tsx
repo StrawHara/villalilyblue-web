@@ -164,6 +164,7 @@ export function GalleryContent() {
       {/* Gallery Grid */}
       <section className="py-8 sm:py-12">
         <Container>
+          <h2 className="sr-only">{t("subtitle")}</h2>
           <motion.div
             layout
             className="grid gap-2 grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4"

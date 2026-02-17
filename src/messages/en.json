@@ -17,10 +17,13 @@
   "hero": {
     "title": "Villa Lily Blue",
     "subtitle": "Spacious & Stylish, Stunning Sea View",
+    "badge": "Renovated in 2024",
     "location": "Anse Marcel, Saint Martin",
     "cta": "Book your stay"
   },
   "home": {
+    "metaDescription": "Villa Lily Blue: luxury villa with panoramic sea views in Anse Marcel, Saint Martin. Heated private pool, 4 bedrooms, concierge service. Book your dream vacation.",
+    "metaKeywords": "luxury villa saint martin, anse marcel villa rental, private pool villa caribbean, saint martin vacation, sea view villa antilles",
     "welcomeTitle": "Welcome to Villa Lily Blue",
     "welcomeText": "Nestled on the heights of Anse Marcel, Villa Lily Blue offers you a haven of peace with an exceptional panoramic view of the Caribbean Sea. This upscale villa combines modern comfort and tropical charm for unforgettable holidays.",
     "highlights": {
@@ -48,31 +51,34 @@
     }
   },
   "villa": {
+    "metaDescription": "Discover Villa Lily Blue: 4 bedrooms, 4 bathrooms, 2,700 sq ft, bright living spaces and sea views. An exceptional villa in Anse Marcel, Saint Martin.",
+    "metaKeywords": "4 bedroom villa saint martin, luxury villa anse marcel, high-end caribbean accommodation, family villa antilles",
     "title": "The Villa",
     "subtitle": "A haven of luxury in the heart of the Caribbean",
     "description": "Villa Lily Blue is an exceptional property that combines architectural elegance and modern comfort. Designed to accommodate up to 8 guests, it offers generous living spaces bathed in natural light.",
+    "renovatedBadge": "Renovated in 2024",
     "features": {
       "bedrooms": "4 Bedrooms",
-      "bathrooms": "4 Bathrooms",
+      "bathrooms": "5 Bathrooms",
       "capacity": "8 Guests",
       "surface": "2,700 sq ft"
     },
     "rooms": {
       "masterSuite": {
         "title": "Master Suite",
-        "description": "King size bed, en-suite bathroom with walk-in shower, sea view, terrace access."
+        "description": "Super king bed (2m wide), en-suite bathroom with walk-in shower, sea view, terrace access."
       },
       "bedroom2": {
         "title": "Bedroom 2",
-        "description": "Queen size bed, attached bathroom, air conditioning, garden view."
+        "description": "Super king bed (2m wide), attached bathroom, air conditioning, garden view."
       },
       "bedroom3": {
         "title": "Bedroom 3",
-        "description": "Two single beds (convertible to king), bathroom, ideal for children."
+        "description": "Two single beds (convertible to super king 2m), bathroom, ideal for children."
       },
       "bedroom4": {
         "title": "Bedroom 4",
-        "description": "Queen size bed, bathroom, direct access to the pool."
+        "description": "Super king bed (2m wide), bathroom, direct access to the pool."
       }
     },
     "living": {
@@ -81,12 +87,14 @@
     }
   },
   "amenities": {
+    "metaDescription": "Villa Lily Blue amenities: heated pool 33x16ft, fully equipped kitchen, 100 Mbps fiber WiFi, fitness room, air conditioning. Everything for a perfect stay in Saint Martin.",
+    "metaKeywords": "villa amenities saint martin, heated private pool, fully equipped villa caribbean, fiber wifi villa, fitness room villa",
     "title": "Amenities & Services",
     "subtitle": "Everything for a perfect stay",
     "categories": {
       "pool": {
         "title": "Pool & Outdoor",
-        "items": ["Heated private pool 33x16ft", "Sun loungers and umbrellas", "Outdoor shower", "BBQ", "Tropical garden", "Private parking"]
+        "items": ["Heated private pool 33x16ft", "Outdoor kitchen & BBQ", "Sun loungers and umbrellas", "Outdoor shower", "Tropical garden", "Private parking (up to 6 cars)"]
       },
       "kitchen": {
         "title": "Kitchen",
@@ -100,9 +108,16 @@
         "title": "Included Services",
         "items": ["End of stay cleaning", "Bed linen and towels", "Beach towels", "Personal welcome", "Concierge available", "Local guide provided"]
       }
+    },
+    "imageAlts": {
+      "kitchen": "Fully equipped modern kitchen at Villa Lily Blue",
+      "fitness": "Private fitness room at Villa Lily Blue",
+      "bathroom": "Elegant bathroom at Villa Lily Blue"
     }
   },
   "gallery": {
+    "metaDescription": "Photo gallery of Villa Lily Blue: discover the pool, bedrooms, sea views, living room and outdoor spaces of our villa in Anse Marcel, Saint Martin.",
+    "metaKeywords": "villa photos saint martin, luxury villa gallery, anse marcel villa images, pool sea view villa",
     "title": "Photo Gallery",
     "subtitle": "Discover Villa Lily Blue in pictures",
     "categories": {
@@ -146,6 +161,8 @@
     }
   },
   "location": {
+    "metaDescription": "Villa Lily Blue location in Anse Marcel, Saint Martin. 5 min from the beach, 10 min from Grand Case, 25 min from SXM airport. Prime location.",
+    "metaKeywords": "anse marcel location, where is anse marcel, villa access saint martin, anse marcel beach distance",
     "title": "Location",
     "subtitle": "In the heart of Anse Marcel",
     "description": "Villa Lily Blue enjoys an exceptional location on the heights of Anse Marcel, one of the most beautiful bays in Saint Martin. Enjoy absolute tranquility while being close to everything.",
@@ -181,6 +198,8 @@
     }
   },
   "rates": {
+    "metaDescription": "Villa Lily Blue rates in Saint Martin: from $380/night in low season. 4 seasonal rates, minimum 5-night stay. Request your personalized quote.",
+    "metaKeywords": "villa rates saint martin, anse marcel villa price, luxury villa cost caribbean, villa booking antilles",
     "title": "Rates & Booking",
     "subtitle": "Plan your stay",
     "seasons": {
@@ -219,6 +238,8 @@
     "cta": "Request a quote"
   },
   "contact": {
+    "metaDescription": "Contact Villa Lily Blue to book your stay in Anse Marcel, Saint Martin. Contact form, FAQ and practical information. Response within 24 hours.",
+    "metaKeywords": "contact villa saint martin, book villa anse marcel, luxury villa quote caribbean, reserve villa antilles",
     "title": "Contact Us",
     "subtitle": "Book your dream vacation",
     "form": {
@@ -325,6 +346,7 @@
     "title": "Anse Marcel",
     "subtitle": "A Hidden Caribbean Gem",
     "metaDescription": "Discover Anse Marcel, one of the most beautiful bays in Saint Martin. Paradise beach, marina, restaurants and water activities.",
+    "metaKeywords": "anse marcel saint martin, anse marcel beach, anse marcel marina, water activities saint martin, anse marcel bay",
     "intro": {
       "title": "Welcome to Anse Marcel",
       "description": "Nestled on the northeast coast of Saint Martin, Anse Marcel is a horseshoe-shaped bay sheltered from the winds, offering calm and crystal-clear waters. It's the perfect place for a peaceful vacation away from the tourist crowds."
@@ -371,6 +393,7 @@
     "title": "Concierge Services",
     "subtitle": "A tailor-made stay",
     "metaDescription": "Discover our concierge services at Villa Lily Blue: housekeeping, private chef, babysitting, transfers, excursions and more.",
+    "metaKeywords": "villa concierge saint martin, private chef villa, luxury services caribbean, airport transfer saint martin, excursions saint martin",
     "intro": {
       "title": "A concierge at your service",
       "description": "To make your stay unforgettable, we offer a full range of personalized services. Our local team takes care of everything for you, before and during your stay."
@@ -481,6 +504,7 @@
     "title": "Saint Martin",
     "subtitle": "The Island of Two Nations",
     "metaDescription": "Discover Saint Martin, a unique island shared between France and the Netherlands. Beaches, gastronomy, culture and nature in the heart of the Caribbean.",
+    "metaKeywords": "saint martin island, saint martin vacation, saint martin beaches, caribbean gastronomy, grand case restaurants, orient bay",
     "intro": {
       "title": "Welcome to Saint Martin",
       "description": "Saint Martin is a unique island in the world: peacefully shared between France (northern part) and the Netherlands (Sint Maarten, southern part) since 1648. This duality creates exceptional cultural, gastronomic and touristic richness on only 34 square miles."
