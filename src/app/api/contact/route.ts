@@ -1,8 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { contactSchema } from "@/lib/validations/contact";
 import { sendContactEmail } from "@/lib/email";
+import { rateLimit } from "@/lib/rate-limit";
 
 export async function POST(request: NextRequest) {
+  // Rate limiting
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+    || request.headers.get("x-real-ip")
+    || "unknown";
+
+  const { allowed, remaining } = rateLimit(ip);
+
+  if (!allowed) {
+    return NextResponse.json(
+      { success: false, error: "Too many requests. Please try again later." },
+      {
+        status: 429,
+        headers: { "Retry-After": "900", "X-RateLimit-Remaining": "0" },
+      }
+    );
+  }
+
   try {
     const body = await request.json();
 
@@ -13,6 +31,12 @@ export async function POST(request: NextRequest) {
     if (validatedData.honeypot) {
       return NextResponse.json({ success: true }); // Silently ignore spam
     }
+
+    // Detect locale from referer or accept-language
+    const referer = request.headers.get("referer") || "";
+    let locale = "fr";
+    if (referer.includes("/en/") || referer.includes("/en")) locale = "en";
+    else if (referer.includes("/es/") || referer.includes("/es")) locale = "es";
 
     // Send emails via SMTP
     try {
@@ -25,10 +49,10 @@ export async function POST(request: NextRequest) {
         departure: validatedData.departure,
         guests: validatedData.guests,
         message: validatedData.message,
+        locale,
       });
     } catch (emailError) {
       console.error("Email sending error:", emailError);
-      // Log but don't fail - we still want to acknowledge the submission
     }
 
     console.log("Contact form submission:", {
@@ -36,9 +60,13 @@ export async function POST(request: NextRequest) {
       email: validatedData.email,
       dates: `${validatedData.arrival} - ${validatedData.departure}`,
       guests: validatedData.guests,
+      locale,
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json(
+      { success: true },
+      { headers: { "X-RateLimit-Remaining": String(remaining) } }
+    );
   } catch (error) {
     console.error("Contact form error:", error);
     return NextResponse.json(

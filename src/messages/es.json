@@ -341,6 +341,11 @@
     "getQuote": "Solicitar presupuesto",
     "backToTop": "Volver arriba"
   },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que busca no existe o ha sido trasladada.",
+    "backHome": "Volver al inicio"
+  },
   "anseMarcel": {
     "title": "Anse Marcel",
     "subtitle": "Una Joya Oculta del Caribe",

@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { Header, Footer } from "@/components/layout";
+import { Header, Footer, FloatingCTA } from "@/components/layout";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import "../globals.css";
 
@@ -88,8 +88,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <Header />
-          <main>{children}</main>
+          <main className="pb-16 md:pb-0">{children}</main>
           <Footer />
+          <FloatingCTA />
         </NextIntlClientProvider>
       </body>
     </html>
