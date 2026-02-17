@@ -31,7 +31,7 @@
       },
       "pool": {
         "title": "Private Pool",
-        "description": "Enjoy your private pool surrounded by a lush tropical garden."
+        "description": "Enjoy your heated private pool surrounded by a lush tropical garden."
       },
       "location": {
         "title": "Prime Location",
@@ -39,7 +39,7 @@
       },
       "comfort": {
         "title": "Absolute Comfort",
-        "description": "4 air-conditioned bedrooms, fully equipped kitchen, high-speed WiFi and everything you need."
+        "description": "4 air-conditioned bedrooms, fully equipped kitchen, 100 Mbps WiFi, fitness room and everything you need."
       }
     },
     "galleryPreview": "Discover the villa in pictures",
@@ -86,7 +86,7 @@
     "categories": {
       "pool": {
         "title": "Pool & Outdoor",
-        "items": ["Private pool 33x16ft", "Sun loungers and umbrellas", "Outdoor shower", "BBQ", "Tropical garden", "Private parking"]
+        "items": ["Heated private pool 33x16ft", "Sun loungers and umbrellas", "Outdoor shower", "BBQ", "Tropical garden", "Private parking"]
       },
       "kitchen": {
         "title": "Kitchen",
@@ -94,7 +94,7 @@
       },
       "comfort": {
         "title": "Comfort",
-        "items": ["Air conditioning in all rooms", "High-speed WiFi", "Flat screen TV", "Bluetooth speakers", "Safe", "Iron and ironing board"]
+        "items": ["Air conditioning in all rooms", "100 Mbps fiber WiFi", "Flat screen TV", "Bluetooth speakers", "Fitness room", "Safe"]
       },
       "services": {
         "title": "Included Services",
@@ -112,6 +112,37 @@
       "pool": "Pool",
       "views": "Views",
       "bedrooms": "Bedrooms"
+    },
+    "alt": {
+      "masterSuite": "Master suite",
+      "bedroom1": "Bedroom 1",
+      "bedroom1View": "Bedroom 1 - alternate view",
+      "bedroom2": "Bedroom 2",
+      "bedroom4": "Bedroom 4",
+      "bedroom4View": "Bedroom 4 - alternate view",
+      "livingDining": "Living and dining room",
+      "livingSpace": "Living space",
+      "lounge": "Lounge",
+      "kitchen": "Modern kitchen",
+      "kitchenEquipped": "Fully equipped kitchen",
+      "dining": "Dining room",
+      "fitness": "Fitness room",
+      "bathroom1": "Bathroom 1",
+      "bathroom2": "Bathroom 2",
+      "bathroom3": "Bathroom 3",
+      "bathroom4": "Bathroom 4",
+      "bathroom5": "Bathroom 5",
+      "pool": "Heated pool",
+      "poolTerrace": "Pool and terrace",
+      "villaPool": "Villa and pool",
+      "aerialView": "Aerial view",
+      "outdoorKitchen": "Outdoor kitchen",
+      "seaView": "View from the sea",
+      "panoramicLiving": "Panoramic view from living room",
+      "oceanView": "Ocean view",
+      "terraceView": "Terrace view",
+      "anseMarcelBeach": "Anse Marcel Beach",
+      "anseMarcelBay": "Anse Marcel Bay"
     }
   },
   "location": {

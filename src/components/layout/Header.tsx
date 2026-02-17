@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Container } from "@/components/ui";
@@ -13,10 +13,19 @@ const navItems = [
   { href: "/villa", label: "villa" },
   { href: "/amenities", label: "amenities" },
   { href: "/gallery", label: "gallery" },
+  { href: "/rates", label: "rates" },
   { href: "/location", label: "location" },
   { href: "/services", label: "services" },
   { href: "/contact", label: "contact" },
 ] as const;
+
+const localeNames: Record<string, string> = {
+  fr: "Français",
+  en: "English",
+  es: "Español",
+};
+
+const allLocales = ["fr", "en", "es"] as const;
 
 export function Header() {
   const t = useTranslations("nav");
@@ -24,6 +33,10 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  const otherLocales = allLocales.filter((l) => l !== locale);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +46,28 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const otherLocale = locale === "fr" ? "en" : "fr";
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
+  // Close language dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setIsLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header
@@ -45,10 +79,10 @@ export function Header() {
       )}
     >
       <Container>
-        <nav className="flex h-20 items-center justify-between">
+        <nav className="flex h-16 items-center justify-between sm:h-20">
           {/* Logo */}
           <Link href="/" className="relative z-10 flex items-center gap-2">
-            <div className="relative h-12 w-12">
+            <div className="relative h-10 w-10 sm:h-12 sm:w-12">
               <Image
                 src="/images/logo.png"
                 alt="Villa Lily Blue"
@@ -59,7 +93,7 @@ export function Header() {
             </div>
             <span
               className={cn(
-                "text-xl font-semibold transition-colors",
+                "text-lg font-semibold transition-colors sm:text-xl",
                 isScrolled ? "text-[var(--secondary)]" : "text-white"
               )}
             >
@@ -68,7 +102,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-6 lg:flex">
+          <div className="hidden items-center gap-5 lg:flex xl:gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -86,30 +120,50 @@ export function Header() {
               </Link>
             ))}
 
-            {/* Language Switcher */}
-            <Link
-              href={pathname}
-              locale={otherLocale}
-              className={cn(
-                "flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm font-medium transition-all hover:bg-[var(--primary)] hover:text-white",
-                isScrolled
-                  ? "border-[var(--primary)] text-[var(--primary)]"
-                  : "border-white text-white"
+            {/* Language Switcher Dropdown */}
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className={cn(
+                  "flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm font-medium transition-all hover:bg-[var(--primary)] hover:text-white",
+                  isScrolled
+                    ? "border-[var(--primary)] text-[var(--primary)]"
+                    : "border-white text-white"
+                )}
+                aria-expanded={isLangOpen}
+                aria-haspopup="true"
+              >
+                <Globe className="h-4 w-4" />
+                {locale.toUpperCase()}
+              </button>
+              {isLangOpen && (
+                <div className="absolute right-0 top-full mt-2 min-w-[140px] overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-black/5">
+                  {otherLocales.map((l) => (
+                    <Link
+                      key={l}
+                      href={pathname}
+                      locale={l}
+                      onClick={() => setIsLangOpen(false)}
+                      className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-[var(--accent)] hover:text-[var(--primary)]"
+                    >
+                      {localeNames[l]}
+                    </Link>
+                  ))}
+                </div>
               )}
-            >
-              <Globe className="h-4 w-4" />
-              {otherLocale.toUpperCase()}
-            </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={cn(
-              "relative z-10 lg:hidden",
+              "relative z-10 p-2 lg:hidden",
               isScrolled || isMobileMenuOpen ? "text-[var(--secondary)]" : "text-white"
             )}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -121,14 +175,15 @@ export function Header() {
 
         {/* Mobile Menu */}
         <div
+          id="mobile-menu"
           className={cn(
-            "fixed inset-0 top-20 bg-white transition-all duration-300 lg:hidden",
+            "fixed inset-0 top-16 bg-white transition-all duration-300 sm:top-20 lg:hidden",
             isMobileMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
           )}
         >
-          <nav className="flex flex-col p-6">
+          <nav className="flex h-full flex-col overflow-y-auto px-6 pb-safe pt-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -145,15 +200,20 @@ export function Header() {
               </Link>
             ))}
 
-            <Link
-              href={pathname}
-              locale={otherLocale}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="mt-4 flex items-center gap-2 text-lg font-medium text-[var(--primary)]"
-            >
-              <Globe className="h-5 w-5" />
-              {otherLocale === "en" ? "English" : "Français"}
-            </Link>
+            <div className="mt-6 flex gap-3">
+              {otherLocales.map((l) => (
+                <Link
+                  key={l}
+                  href={pathname}
+                  locale={l}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-2 rounded-full border border-[var(--primary)] px-4 py-2.5 text-sm font-medium text-[var(--primary)] transition-colors hover:bg-[var(--primary)] hover:text-white"
+                >
+                  <Globe className="h-4 w-4" />
+                  {localeNames[l]}
+                </Link>
+              ))}
+            </div>
           </nav>
         </div>
       </Container>

@@ -140,13 +140,15 @@ export function ContactContent() {
                 <Card className="overflow-hidden p-0">
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="flex w-full items-center justify-between p-6 text-left transition-colors hover:bg-gray-50"
+                    className="flex w-full items-center justify-between p-4 text-left transition-colors hover:bg-gray-50 sm:p-6"
+                    aria-expanded={openFaq === index}
+                    aria-controls={`faq-item-${index}`}
                   >
-                    <span className="font-medium text-[var(--secondary)]">
+                    <span className="pr-4 font-medium text-[var(--secondary)]">
                       {item.question}
                     </span>
                     <ChevronDown
-                      className={`h-5 w-5 text-gray-400 transition-transform ${
+                      className={`h-5 w-5 shrink-0 text-gray-400 transition-transform ${
                         openFaq === index ? "rotate-180" : ""
                       }`}
                     />
@@ -154,13 +156,14 @@ export function ContactContent() {
                   <AnimatePresence>
                     {openFaq === index && (
                       <motion.div
+                        id={`faq-item-${index}`}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="border-t px-6 pb-6 pt-4 text-gray-600">
+                        <div className="border-t px-4 pb-4 pt-3 text-gray-600 sm:px-6 sm:pb-6 sm:pt-4">
                           {item.answer}
                         </div>
                       </motion.div>

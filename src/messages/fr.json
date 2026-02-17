@@ -31,7 +31,7 @@
       },
       "pool": {
         "title": "Piscine Privée",
-        "description": "Profitez de votre piscine privée entourée d'un jardin tropical luxuriant."
+        "description": "Profitez de votre piscine chauffée privée entourée d'un jardin tropical luxuriant."
       },
       "location": {
         "title": "Emplacement Privilégié",
@@ -39,7 +39,7 @@
       },
       "comfort": {
         "title": "Confort Absolu",
-        "description": "4 chambres climatisées, cuisine équipée, WiFi haut débit et tout le nécessaire."
+        "description": "4 chambres climatisées, cuisine équipée, WiFi fibre 100 Mbps, salle de fitness et tout le nécessaire."
       }
     },
     "galleryPreview": "Découvrir la villa en images",
@@ -86,7 +86,7 @@
     "categories": {
       "pool": {
         "title": "Piscine & Extérieur",
-        "items": ["Piscine privée 10x5m", "Transats et parasols", "Douche extérieure", "Barbecue", "Jardin tropical", "Parking privé"]
+        "items": ["Piscine chauffée privée 10x5m", "Transats et parasols", "Douche extérieure", "Barbecue", "Jardin tropical", "Parking privé"]
       },
       "kitchen": {
         "title": "Cuisine",
@@ -94,7 +94,7 @@
       },
       "comfort": {
         "title": "Confort",
-        "items": ["Climatisation dans toutes les pièces", "WiFi haut débit", "TV écran plat", "Enceintes Bluetooth", "Coffre-fort", "Fer et table à repasser"]
+        "items": ["Climatisation dans toutes les pièces", "WiFi fibre 100 Mbps", "TV écran plat", "Enceintes Bluetooth", "Salle de fitness", "Coffre-fort"]
       },
       "services": {
         "title": "Services Inclus",
@@ -112,6 +112,37 @@
       "pool": "Piscine",
       "views": "Vues",
       "bedrooms": "Chambres"
+    },
+    "alt": {
+      "masterSuite": "Suite parentale",
+      "bedroom1": "Chambre 1",
+      "bedroom1View": "Chambre 1 - autre vue",
+      "bedroom2": "Chambre 2",
+      "bedroom4": "Chambre 4",
+      "bedroom4View": "Chambre 4 - autre vue",
+      "livingDining": "Salon et salle à manger",
+      "livingSpace": "Espace de vie",
+      "lounge": "Salon",
+      "kitchen": "Cuisine moderne",
+      "kitchenEquipped": "Cuisine équipée",
+      "dining": "Salle à manger",
+      "fitness": "Salle de fitness",
+      "bathroom1": "Salle de bain 1",
+      "bathroom2": "Salle de bain 2",
+      "bathroom3": "Salle de bain 3",
+      "bathroom4": "Salle de bain 4",
+      "bathroom5": "Salle de bain 5",
+      "pool": "Piscine chauffée",
+      "poolTerrace": "Piscine et terrasse",
+      "villaPool": "Villa et piscine",
+      "aerialView": "Vue aérienne",
+      "outdoorKitchen": "Cuisine extérieure",
+      "seaView": "Vue depuis la mer",
+      "panoramicLiving": "Vue panoramique depuis le salon",
+      "oceanView": "Vue sur la mer",
+      "terraceView": "Vue depuis la terrasse",
+      "anseMarcelBeach": "Plage d'Anse Marcel",
+      "anseMarcelBay": "Baie d'Anse Marcel"
     }
   },
   "location": {

@@ -82,7 +82,7 @@ export function ServicesContent() {
       {/* Services Grid */}
       <section className="bg-gray-50 py-20">
         <Container>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
             {categoryConfig.map(({ key, icon: Icon, color }, index) => (
               <motion.div
                 key={key}

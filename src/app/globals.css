@@ -73,6 +73,13 @@ html {
   outline-offset: 2px;
 }
 
+/* Safe area for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 /* Image optimization */
 img {
   max-width: 100%;

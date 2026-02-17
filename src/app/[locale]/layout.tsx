@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         fr: "/fr",
         en: "/en",
+        es: "/es",
       },
     },
     openGraph: {
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("description"),
       url: "https://villalilyblue.com",
       siteName: "Villa Lily Blue",
-      locale: locale === "fr" ? "fr_FR" : "en_US",
+      locale: locale === "fr" ? "fr_FR" : locale === "es" ? "es_ES" : "en_US",
       type: "website",
       images: [
         {

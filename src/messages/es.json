@@ -1,0 +1,549 @@
+{
+  "metadata": {
+    "title": "Villa Lily Blue - Alquiler de Villa de Lujo en Anse Marcel, Saint Martin",
+    "description": "Descubra Villa Lily Blue, una villa espaciosa y elegante con impresionantes vistas al mar en Anse Marcel, Saint Martin. Piscina privada, 4 habitaciones, entorno idílico.",
+    "keywords": "villa saint martin, alquiler villa caribe, villa lujo antillas, casa vacacional caribe, villa piscina privada saint martin, alquiler villa anse marcel"
+  },
+  "nav": {
+    "home": "Inicio",
+    "villa": "La Villa",
+    "amenities": "Equipamiento",
+    "gallery": "Galería",
+    "location": "Ubicación",
+    "rates": "Tarifas",
+    "services": "Conserjería",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Villa Lily Blue",
+    "subtitle": "Espaciosa y Elegante, Impresionante Vista al Mar",
+    "location": "Anse Marcel, Saint Martin",
+    "cta": "Reserve su estancia"
+  },
+  "home": {
+    "welcomeTitle": "Bienvenido a Villa Lily Blue",
+    "welcomeText": "Ubicada en las alturas de Anse Marcel, Villa Lily Blue le ofrece un remanso de paz con una vista panorámica excepcional del mar Caribe. Esta villa de alto standing combina confort moderno y encanto tropical para unas vacaciones inolvidables.",
+    "highlights": {
+      "title": "¿Por qué elegir Villa Lily Blue?",
+      "seaView": {
+        "title": "Vista Panorámica al Mar",
+        "description": "Despierte cada mañana ante un panorama excepcional del mar Caribe turquesa."
+      },
+      "pool": {
+        "title": "Piscina Privada",
+        "description": "Disfrute de su piscina privada climatizada rodeada de un exuberante jardín tropical."
+      },
+      "location": {
+        "title": "Ubicación Privilegiada",
+        "description": "A pocos minutos de la playa de Anse Marcel y de las mejores direcciones de la isla."
+      },
+      "comfort": {
+        "title": "Confort Absoluto",
+        "description": "4 habitaciones climatizadas, cocina totalmente equipada, WiFi 100 Mbps, sala de fitness y todo lo que necesita."
+      }
+    },
+    "galleryPreview": "Descubra la villa en imágenes",
+    "testimonials": {
+      "title": "Lo que dicen nuestros huéspedes"
+    }
+  },
+  "villa": {
+    "title": "La Villa",
+    "subtitle": "Un refugio de lujo en el corazón del Caribe",
+    "description": "Villa Lily Blue es una propiedad excepcional que combina elegancia arquitectónica y confort moderno. Diseñada para alojar hasta 8 huéspedes, ofrece amplios espacios de vida bañados de luz natural.",
+    "features": {
+      "bedrooms": "4 Habitaciones",
+      "bathrooms": "4 Baños",
+      "capacity": "8 Huéspedes",
+      "surface": "250 m²"
+    },
+    "rooms": {
+      "masterSuite": {
+        "title": "Suite Principal",
+        "description": "Cama king size, baño privado con ducha a ras de suelo, vista al mar, acceso a la terraza."
+      },
+      "bedroom2": {
+        "title": "Habitación 2",
+        "description": "Cama queen size, baño privado, aire acondicionado, vista al jardín."
+      },
+      "bedroom3": {
+        "title": "Habitación 3",
+        "description": "Dos camas individuales (convertibles en king), baño, ideal para niños."
+      },
+      "bedroom4": {
+        "title": "Habitación 4",
+        "description": "Cama queen size, baño, acceso directo a la piscina."
+      }
+    },
+    "living": {
+      "title": "Espacios de Vida",
+      "description": "Un amplio salón que se abre a la terraza, un comedor para 8 personas y una cocina americana totalmente equipada."
+    }
+  },
+  "amenities": {
+    "title": "Equipamiento y Servicios",
+    "subtitle": "Todo para una estancia perfecta",
+    "categories": {
+      "pool": {
+        "title": "Piscina y Exterior",
+        "items": ["Piscina climatizada privada 10x5m", "Tumbonas y sombrillas", "Ducha exterior", "Barbacoa", "Jardín tropical", "Aparcamiento privado"]
+      },
+      "kitchen": {
+        "title": "Cocina",
+        "items": ["Cocina totalmente equipada", "Frigorífico americano", "Horno y microondas", "Lavavajillas", "Cafetera Nespresso", "Batidora y utensilios"]
+      },
+      "comfort": {
+        "title": "Confort",
+        "items": ["Aire acondicionado en todas las habitaciones", "WiFi fibra 100 Mbps", "Televisor de pantalla plana", "Altavoces Bluetooth", "Sala de fitness", "Caja fuerte"]
+      },
+      "services": {
+        "title": "Servicios Incluidos",
+        "items": ["Limpieza de fin de estancia", "Ropa de cama y toallas", "Toallas de playa", "Bienvenida personalizada", "Conserjería disponible", "Guía local proporcionada"]
+      }
+    }
+  },
+  "gallery": {
+    "title": "Galería de Fotos",
+    "subtitle": "Descubra Villa Lily Blue en imágenes",
+    "categories": {
+      "all": "Todas",
+      "exterior": "Exterior",
+      "interior": "Interior",
+      "pool": "Piscina",
+      "views": "Vistas",
+      "bedrooms": "Habitaciones"
+    },
+    "alt": {
+      "masterSuite": "Suite principal",
+      "bedroom1": "Habitación 1",
+      "bedroom1View": "Habitación 1 - vista alternativa",
+      "bedroom2": "Habitación 2",
+      "bedroom4": "Habitación 4",
+      "bedroom4View": "Habitación 4 - vista alternativa",
+      "livingDining": "Salón y comedor",
+      "livingSpace": "Espacio de estar",
+      "lounge": "Sala de estar",
+      "kitchen": "Cocina moderna",
+      "kitchenEquipped": "Cocina totalmente equipada",
+      "dining": "Comedor",
+      "fitness": "Sala de fitness",
+      "bathroom1": "Baño 1",
+      "bathroom2": "Baño 2",
+      "bathroom3": "Baño 3",
+      "bathroom4": "Baño 4",
+      "bathroom5": "Baño 5",
+      "pool": "Piscina climatizada",
+      "poolTerrace": "Piscina y terraza",
+      "villaPool": "Villa y piscina",
+      "aerialView": "Vista aérea",
+      "outdoorKitchen": "Cocina exterior",
+      "seaView": "Vista desde el mar",
+      "panoramicLiving": "Vista panorámica desde el salón",
+      "oceanView": "Vista al océano",
+      "terraceView": "Vista desde la terraza",
+      "anseMarcelBeach": "Playa de Anse Marcel",
+      "anseMarcelBay": "Bahía de Anse Marcel"
+    }
+  },
+  "location": {
+    "title": "Ubicación",
+    "subtitle": "En el corazón de Anse Marcel",
+    "description": "Villa Lily Blue goza de una ubicación excepcional en las alturas de Anse Marcel, una de las bahías más bellas de Saint Martin. Disfrute de una tranquilidad absoluta mientras permanece cerca de todo.",
+    "distances": {
+      "title": "Lugares Cercanos",
+      "beach": "Playa de Anse Marcel: 5 min",
+      "marina": "Puerto Deportivo de Anse Marcel: 5 min",
+      "marigot": "Marigot: 15 min",
+      "grandCase": "Grand Case: 10 min",
+      "airport": "Aeropuerto SXM: 25 min",
+      "orient": "Orient Bay: 20 min"
+    },
+    "activities": {
+      "title": "Actividades por descubrir",
+      "items": [
+        {
+          "title": "Playas Paradisíacas",
+          "description": "Anse Marcel, Grand Case, Orient Bay... playas de arena blanca por descubrir."
+        },
+        {
+          "title": "Deportes Acuáticos",
+          "description": "Buceo, snorkel, moto acuática, paddle, vela... la isla rebosa de actividades."
+        },
+        {
+          "title": "Gastronomía",
+          "description": "Grand Case, la capital culinaria del Caribe, a solo 10 minutos."
+        },
+        {
+          "title": "Excursiones",
+          "description": "Descubra las islas vecinas: Anguilla, Saint Barth, Tintamarre."
+        }
+      ]
+    }
+  },
+  "rates": {
+    "title": "Tarifas y Reservas",
+    "subtitle": "Planifique su estancia",
+    "seasons": {
+      "low": {
+        "name": "Temporada Baja",
+        "period": "Mayo - Octubre",
+        "price": "Desde $380 / noche"
+      },
+      "mid": {
+        "name": "Temporada Media",
+        "period": "Noviembre - Mediados de Diciembre",
+        "price": "Desde $490 / noche"
+      },
+      "high": {
+        "name": "Temporada Alta",
+        "period": "Mediados de Diciembre - Abril",
+        "price": "Desde $600 / noche"
+      },
+      "peak": {
+        "name": "Temporada Festiva",
+        "period": "20 Dic - 5 Ene",
+        "price": "Bajo consulta"
+      }
+    },
+    "includes": {
+      "title": "La tarifa incluye",
+      "items": ["Limpieza de fin de estancia", "Ropa de cama y toallas", "Toallas de playa", "WiFi", "Bienvenida personalizada", "Impuestos locales"]
+    },
+    "conditions": {
+      "title": "Condiciones",
+      "minStay": "Estancia mínima: 5 noches (7 noches en temporada alta)",
+      "deposit": "Depósito: 30% en la reserva",
+      "balance": "Saldo: 30 días antes de la llegada",
+      "security": "Fianza: $1,600 (reembolsada tras la salida)"
+    },
+    "cta": "Solicitar presupuesto"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Reserve sus vacaciones soñadas",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "arrival": "Fecha de llegada",
+      "departure": "Fecha de salida",
+      "guests": "Número de huéspedes",
+      "message": "Su mensaje",
+      "privacy": "Acepto la política de privacidad",
+      "submit": "Enviar mi solicitud",
+      "sending": "Enviando...",
+      "success": "¡Su mensaje ha sido enviado! Le responderemos en un plazo de 24 horas.",
+      "error": "Se ha producido un error. Por favor, inténtelo de nuevo."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "email": "contact@villalilyblue.com",
+      "phone": "+590 690 XX XX XX",
+      "response": "Respuesta en 24h"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "question": "¿Cuál es la capacidad máxima de la villa?",
+          "answer": "Villa Lily Blue puede alojar hasta 8 huéspedes en 4 habitaciones."
+        },
+        {
+          "question": "¿Hay una estancia mínima?",
+          "answer": "Sí, la estancia mínima es de 5 noches (7 noches durante la temporada alta y los días festivos)."
+        },
+        {
+          "question": "¿Se admiten mascotas?",
+          "answer": "No admitimos mascotas, lo sentimos."
+        },
+        {
+          "question": "¿Cómo funciona la llegada?",
+          "answer": "Organizamos una bienvenida personalizada. Un representante le esperará en la villa para entregarle las llaves y mostrarle las instalaciones."
+        }
+      ]
+    }
+  },
+  "legal": {
+    "title": "Aviso Legal",
+    "editor": {
+      "title": "Editor del Sitio Web",
+      "content": "Villa Lily Blue\nAnse Marcel, 97150 Saint Martin\nEmail: contact@villalilyblue.com"
+    },
+    "hosting": {
+      "title": "Alojamiento Web",
+      "content": "Este sitio está alojado por Vercel Inc.\n440 N Barranca Ave #4133\nCovina, CA 91723, USA"
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "content": "La información recopilada a través del formulario de contacto está destinada únicamente a gestionar su solicitud de reserva. Nunca se comparte con terceros. De acuerdo con el RGPD, usted tiene derecho de acceso, rectificación y supresión de sus datos."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "content": "Este sitio solo utiliza cookies técnicas necesarias para su funcionamiento. No se utilizan cookies de seguimiento ni publicitarias."
+    },
+    "credits": {
+      "title": "Créditos",
+      "content": "Fotos: Villa Lily Blue\nDesarrollo: StrawTech"
+    }
+  },
+  "landing": {
+    "vacation": {
+      "title": "Sus Vacaciones Soñadas en Saint Martin",
+      "subtitle": "Villa Lily Blue le espera",
+      "badge": "Oferta Exclusiva",
+      "cta": "Reserve ahora",
+      "features": ["Vista panorámica al mar", "Piscina privada", "4 habitaciones", "Servicio de conserjería"],
+      "urgency": "Disponibilidad limitada esta temporada"
+    },
+    "luxury": {
+      "title": "Lujo en el Corazón del Caribe",
+      "subtitle": "Una experiencia inolvidable en Anse Marcel",
+      "badge": "Villa Premium",
+      "cta": "Descubra la villa",
+      "features": ["250 m² de lujo", "Vistas impresionantes", "Equipamiento de alta gama", "Ubicación privilegiada"],
+      "testimonial": "\"Una estancia mágica, una villa perfecta\" - Marie L."
+    }
+  },
+  "footer": {
+    "description": "Villa de lujo con vista al mar en Anse Marcel, Saint Martin. Piscina privada, 4 habitaciones, entorno idílico para unas vacaciones inolvidables.",
+    "quickLinks": "Enlaces Rápidos",
+    "contact": "Contacto",
+    "followUs": "Síguenos",
+    "legal": "Aviso Legal",
+    "privacy": "Privacidad",
+    "copyright": "© {year} Villa Lily Blue. Todos los derechos reservados."
+  },
+  "common": {
+    "learnMore": "Más información",
+    "bookNow": "Reserve ahora",
+    "viewGallery": "Ver galería",
+    "getQuote": "Solicitar presupuesto",
+    "backToTop": "Volver arriba"
+  },
+  "anseMarcel": {
+    "title": "Anse Marcel",
+    "subtitle": "Una Joya Oculta del Caribe",
+    "metaDescription": "Descubra Anse Marcel, una de las bahías más bellas de Saint Martin. Playa paradisíaca, puerto deportivo, restaurantes y actividades acuáticas.",
+    "intro": {
+      "title": "Bienvenido a Anse Marcel",
+      "description": "Ubicada en la costa noreste de Saint Martin, Anse Marcel es una bahía en forma de herradura protegida de los vientos, que ofrece aguas tranquilas y cristalinas. Es el lugar perfecto para unas vacaciones tranquilas lejos de las multitudes turísticas."
+    },
+    "beach": {
+      "title": "Playa de Anse Marcel",
+      "description": "Una playa de arena blanca bordeada de cocoteros, con aguas turquesas tranquilas y poco profundas. Perfecta para familias y entusiastas del snorkel. Los arrecifes de coral cercanos albergan una colorida vida marina."
+    },
+    "marina": {
+      "title": "El Puerto Deportivo",
+      "description": "El puerto deportivo de Anse Marcel acoge yates y embarcaciones de recreo de todo el mundo. También encontrará restaurantes, bares y boutiques frente al mar."
+    },
+    "activities": {
+      "title": "Actividades en Anse Marcel",
+      "items": [
+        {
+          "title": "Snorkel y Buceo",
+          "description": "Explore los fondos marinos ricos en corales y peces tropicales."
+        },
+        {
+          "title": "Kayak y Paddle",
+          "description": "Alquile un kayak o paddle para explorar la bahía y sus calas escondidas."
+        },
+        {
+          "title": "Senderismo",
+          "description": "Tome el sendero hacia Happy Bay, una playa salvaje accesible a pie."
+        },
+        {
+          "title": "Excursiones en Barco",
+          "description": "Embarque desde el puerto deportivo hacia Tintamarre, Pinel o Anguilla."
+        }
+      ]
+    },
+    "restaurants": {
+      "title": "Dónde Comer",
+      "description": "El puerto deportivo ofrece varios restaurantes con vistas a los barcos: cocina francesa, criolla e internacional. A 10 minutos, Grand Case ofrece opciones gastronómicas excepcionales."
+    },
+    "access": {
+      "title": "Cómo Llegar",
+      "description": "Anse Marcel es accesible por una carretera sinuosa desde la carretera principal. La bahía también es accesible por barco. El Aeropuerto Princess Juliana (SXM) está a 25 minutos en coche."
+    }
+  },
+  "services": {
+    "title": "Servicios de Conserjería",
+    "subtitle": "Una estancia a su medida",
+    "metaDescription": "Descubra nuestros servicios de conserjería en Villa Lily Blue: limpieza, chef privado, cuidado de niños, traslados, excursiones y mucho más.",
+    "intro": {
+      "title": "Una conserjería a su servicio",
+      "description": "Para hacer de su estancia un momento inolvidable, ofrecemos una amplia gama de servicios personalizados. Nuestro equipo local se encarga de todo, antes y durante su estancia."
+    },
+    "categories": {
+      "housekeeping": {
+        "title": "Limpieza y Mantenimiento",
+        "description": "Servicio de limpieza profesional para mantener su villa impecable.",
+        "items": [
+          "Limpieza diaria o bisemanal",
+          "Cambio de ropa de cama y toallas",
+          "Mantenimiento de la piscina",
+          "Mantenimiento del jardín"
+        ]
+      },
+      "chef": {
+        "title": "Chef Privado",
+        "description": "Disfrute de una cocina refinada sin salir de su villa.",
+        "items": [
+          "Entrega de desayunos",
+          "Almuerzo o cena preparados in situ",
+          "Menú personalizado a su gusto",
+          "Cocina local, francesa o internacional",
+          "Catering para eventos especiales"
+        ]
+      },
+      "childcare": {
+        "title": "Cuidado de Niños",
+        "description": "Disfrute de una velada romántica con total tranquilidad.",
+        "items": [
+          "Cuidado de niños diurno o nocturno",
+          "Personal cualificado y experimentado",
+          "Actividades adaptadas a cada edad",
+          "Referencias disponibles bajo petición"
+        ]
+      },
+      "transport": {
+        "title": "Traslados y Vehículos",
+        "description": "Desplácese por la isla con total facilidad.",
+        "items": [
+          "Traslado VIP al aeropuerto",
+          "Alquiler de coche entregado en la villa",
+          "Chófer privado por el día",
+          "Alquiler de scooter o quad"
+        ]
+      },
+      "excursions": {
+        "title": "Excursiones y Actividades",
+        "description": "Descubra los tesoros de Saint Martin y las islas vecinas.",
+        "items": [
+          "Paseo en barco privado",
+          "Excursión a Anguilla o Saint Barth",
+          "Buceo y snorkel",
+          "Moto acuática, paddle, kayak",
+          "Clases de vela"
+        ]
+      },
+      "wellness": {
+        "title": "Bienestar y Relajación",
+        "description": "Cuídese sin salir de la villa.",
+        "items": [
+          "Masaje a domicilio",
+          "Sesión privada de yoga",
+          "Peluquería y esteticista",
+          "Entrenador personal"
+        ]
+      },
+      "provisions": {
+        "title": "Compras y Provisiones",
+        "description": "Llegue a una villa ya aprovisionada.",
+        "items": [
+          "Compras de bienvenida",
+          "Aprovisionamiento personalizado",
+          "Pedidos de vino y champán",
+          "Productos locales y ecológicos"
+        ]
+      },
+      "events": {
+        "title": "Eventos Privados",
+        "description": "Celebre sus momentos especiales en un entorno excepcional.",
+        "items": [
+          "Organización de cumpleaños",
+          "Cena romántica",
+          "Celebración de boda",
+          "Eventos corporativos"
+        ]
+      }
+    },
+    "cta": {
+      "title": "¿Necesita un servicio específico?",
+      "description": "Contáctenos para cualquier solicitud especial. Haremos todo lo posible para satisfacer sus expectativas.",
+      "button": "Contáctenos"
+    }
+  },
+  "reviews": {
+    "title": "Lo Que Dicen Nuestros Huéspedes",
+    "subtitle": "Estancias inolvidables en Villa Lily Blue",
+    "basedOn": "Basado en {count} opiniones",
+    "viewAllOnAirbnb": "Ver todas las opiniones en Airbnb",
+    "review1": "¡Villa preciosa con una vista impresionante! Todo fue perfecto: limpieza, equipamiento, bienvenida. La piscina es una verdadera delicia. Tuvimos unas vacaciones familiares de ensueño.",
+    "review2": "Estancia excepcional en esta villa renovada con gusto. La cocina está bien equipada, las habitaciones son amplias y climatizadas. La ubicación en Anse Marcel es ideal, cerca de todo pero tranquila.",
+    "review3": "¡Nos encantó nuestra semana en Villa Lily Blue! La vista al mar desde la terraza es increíble, especialmente al atardecer. Servicio de conserjería muy receptivo. ¡Volveremos!",
+    "review4": "Una villa de alto standing, decorada con elegancia. Todo está pensado para el confort de los huéspedes. La piscina climatizada es un verdadero plus. ¡Gracias por la cálida bienvenida!",
+    "review5": "Vacaciones perfectas con nuestros hijos. La villa es segura, la piscina es genial y la playa de Anse Marcel está a 5 minutos. Los restaurantes de Grand Case son imprescindibles.",
+    "review6": "¡Segunda estancia en Villa Lily Blue y seguimos encantados! La villa ha sido completamente renovada y es preciosa. Un verdadero remanso de paz con todas las comodidades modernas."
+  },
+  "saintMartin": {
+    "title": "Saint Martin",
+    "subtitle": "La Isla de Dos Naciones",
+    "metaDescription": "Descubra Saint Martin, una isla única compartida entre Francia y los Países Bajos. Playas, gastronomía, cultura y naturaleza en el corazón del Caribe.",
+    "intro": {
+      "title": "Bienvenido a Saint Martin",
+      "description": "Saint Martin es una isla única en el mundo: compartida pacíficamente entre Francia (parte norte) y los Países Bajos (Sint Maarten, parte sur) desde 1648. Esta dualidad crea una riqueza cultural, gastronómica y turística excepcional en tan solo 87 km²."
+    },
+    "frenchSide": {
+      "title": "Parte Francesa",
+      "description": "La parte francesa ofrece un encanto auténtico con sus pueblos pintorescos, gastronomía refinada y playas vírgenes. Marigot, la capital, seduce con su colorido mercado y su arquitectura criolla."
+    },
+    "dutchSide": {
+      "title": "Parte Holandesa",
+      "description": "Sint Maarten es conocida por su animada vida nocturna, sus casinos y la playa de Maho Beach donde los aviones pasan justo por encima. Philipsburg ofrece compras libres de impuestos y restaurantes internacionales."
+    },
+    "beaches": {
+      "title": "Las Playas Más Bellas",
+      "items": [
+        {
+          "name": "Anse Marcel",
+          "description": "¡Nuestra bahía favorita! Aguas tranquilas, arena blanca, ambiente apacible."
+        },
+        {
+          "name": "Orient Bay",
+          "description": "La playa más animada con sus chiringuitos y deportes acuáticos."
+        },
+        {
+          "name": "Grand Case",
+          "description": "Playa familiar en el pueblo gastronómico de la isla."
+        },
+        {
+          "name": "Happy Bay",
+          "description": "Playa salvaje accesible solo a pie, un secreto bien guardado."
+        },
+        {
+          "name": "Baie Rouge",
+          "description": "Paisaje de postal con sus acantilados y arena dorada."
+        },
+        {
+          "name": "Maho Beach",
+          "description": "Famosa por los aviones que aterrizan justo encima."
+        }
+      ]
+    },
+    "gastronomy": {
+      "title": "Gastronomía",
+      "description": "Saint Martin es apodada la \"Capital Culinaria del Caribe\". Grand Case, a 10 minutos de Villa Lily Blue, cuenta con más de 50 restaurantes que ofrecen cocina francesa, criolla, italiana, asiática y mucho más."
+    },
+    "activities": {
+      "title": "Actividades y Excursiones",
+      "items": [
+        "Excursión a Tintamarre, una isla desierta",
+        "Excursión de un día a Anguilla (20 min en ferry)",
+        "Día de compras en Sint Maarten",
+        "Buceo en pecios y arrecifes",
+        "Visita a la Granja de Mariposas",
+        "Senderismo al Pic Paradis (424 m)"
+      ]
+    },
+    "practical": {
+      "title": "Información Práctica",
+      "currency": "Moneda: Euro (parte francesa), Dólar estadounidense (parte holandesa)",
+      "language": "Idiomas: Francés, Inglés, Holandés",
+      "weather": "Clima: Tropical, 27°C todo el año",
+      "airport": "Aeropuerto: Princess Juliana (SXM)",
+      "driving": "Conducción: Por la derecha en ambos lados"
+    }
+  }
+}

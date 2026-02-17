@@ -9,6 +9,7 @@ import Image from "next/image";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const tCommon = useTranslations("common");
 
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
@@ -32,28 +33,28 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="mb-4 flex items-center justify-center gap-2 text-[var(--primary)]">
-            <MapPin className="h-5 w-5" />
-            <span className="text-lg font-medium">{t("location")}</span>
+          <div className="mb-4 flex items-center justify-center gap-2 text-white/90">
+            <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />
+            <span className="text-base font-medium sm:text-lg">{t("location")}</span>
           </div>
 
-          <h1 className="mb-4 text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl">
+          <h1 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl">
             {t("title")}
           </h1>
 
-          <p className="mx-auto mb-8 max-w-2xl text-xl text-white/90 md:text-2xl">
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90 sm:text-xl md:text-2xl">
             {t("subtitle")}
           </p>
 
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
             <Link href="/contact">
-              <Button size="lg" className="text-lg">
+              <Button size="lg" className="w-full text-lg sm:w-auto">
                 {t("cta")}
               </Button>
             </Link>
             <Link href="/gallery">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[var(--secondary)]">
-                Galerie
+              <Button variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-[var(--secondary)] sm:w-auto">
+                {tCommon("viewGallery")}
               </Button>
             </Link>
           </div>

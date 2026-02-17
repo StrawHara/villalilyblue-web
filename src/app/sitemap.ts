@@ -3,12 +3,13 @@ import { MetadataRoute } from "next";
 const baseUrl = "https://villalilyblue.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const locales = ["fr", "en"];
+  const locales = ["fr", "en", "es"];
   const routes = [
     "",
     "/villa",
     "/amenities",
     "/gallery",
+    "/rates",
     "/location",
     "/services",
     "/contact",
@@ -29,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             fr: `${baseUrl}/fr${route}`,
             en: `${baseUrl}/en${route}`,
+            es: `${baseUrl}/es${route}`,
           },
         },
       });

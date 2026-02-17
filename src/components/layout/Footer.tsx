@@ -8,6 +8,7 @@ const quickLinks = [
   { href: "/villa", label: "villa" },
   { href: "/amenities", label: "amenities" },
   { href: "/gallery", label: "gallery" },
+  { href: "/rates", label: "rates" },
   { href: "/services", label: "services" },
   { href: "/contact", label: "contact" },
 ] as const;
@@ -93,25 +94,38 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Social */}
+          {/* Social & Airbnb */}
           <div>
             <h4 className="mb-4 text-lg font-semibold">{t("followUs")}</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/villalilyblue/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[var(--primary)]"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/villalilyblue"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-[var(--primary)]"
               >
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
+            <a
+              href="https://www.airbnb.fr/rooms/1313868121596013747"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-[var(--primary)]"
+            >
+              Airbnb
+              <span className="rounded bg-white/10 px-1.5 py-0.5 text-xs">5.0 ★</span>
+            </a>
           </div>
         </div>
 

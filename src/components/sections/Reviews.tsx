@@ -114,7 +114,7 @@ export function Reviews({ showAll = false, locale = "fr" }: ReviewsProps) {
                     <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-sm text-gray-500">{t("basedOn", { count: 14 })}</span>
+                <span className="text-sm text-gray-500">{t("basedOn", { count: 15 })}</span>
               </div>
             </div>
           </div>
