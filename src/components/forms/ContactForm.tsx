@@ -8,6 +8,7 @@ import { Button, Input, Textarea } from "@/components/ui";
 import { contactSchema, type ContactFormData } from "@/lib/validations/contact";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 export function ContactForm() {
   const t = useTranslations("contact.form");
@@ -41,10 +42,12 @@ export function ContactForm() {
       });
 
       if (response.ok) {
+        trackEvent("submit", "contact_form", "success");
         setStatus("success");
         reset();
         setTimeout(() => setStatus("idle"), 5000);
       } else {
+        trackEvent("submit", "contact_form", "error");
         setStatus("error");
         setTimeout(() => setStatus("idle"), 5000);
       }

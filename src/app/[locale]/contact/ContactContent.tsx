@@ -5,8 +5,9 @@ import { useTranslations } from "next-intl";
 import { Container, Card, CardTitle } from "@/components/ui";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Phone, Clock, ChevronDown } from "lucide-react";
+import { Mail, Clock, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 export function ContactContent() {
   const t = useTranslations("contact");
@@ -24,6 +25,9 @@ export function ContactContent() {
             alt="Contact Villa Lily Blue"
             fill
             priority
+            quality={75}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMCwsKCwsKDA4QDQwNEA4YExERExgcGBYYHCIhIR4dHx8fHx//2wBDAQMEBAUEBQkFBQkfDQsNHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAIABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgcI/8QAIhAAAQQBBAMBAAAAAAAAAAAAAQIDBAUABhESITFBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADB//EABsRAAICAwEAAAAAAAAAAAAAAAECAAMRITFB/9oADAMBAAIRAxEAPwCW6Y1fYadtGaW8gW8W1lkCTFaUXChwA2yobcSSB3jS3xLZ1GtbulEWZe3Fk9GjKLaZEt1xKVEDkQCdtwOzgYxlKtYHshTuTU52f/Z"
             className="object-cover"
             sizes="100vw"
           />
@@ -73,20 +77,12 @@ export function ContactContent() {
                   <a
                     href={`mailto:${t("info.email")}`}
                     className="flex items-center gap-3 text-gray-600 transition-colors hover:text-[var(--primary)]"
+                    onClick={() => trackEvent("click", "contact", "contact_page_email")}
                   >
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary)]/10">
                       <Mail className="h-5 w-5 text-[var(--primary)]" />
                     </div>
                     {t("info.email")}
-                  </a>
-                  <a
-                    href={`tel:${t("info.phone")}`}
-                    className="flex items-center gap-3 text-gray-600 transition-colors hover:text-[var(--primary)]"
-                  >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary)]/10">
-                      <Phone className="h-5 w-5 text-[var(--primary)]" />
-                    </div>
-                    {t("info.phone")}
                   </a>
                   <div className="flex items-center gap-3 text-gray-600">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--primary)]/10">

@@ -18,7 +18,6 @@ export function JsonLd() {
     name: "Villa Lily Blue",
     description,
     url: "https://villalilyblue.com",
-    telephone: "+590 690 88 16 24",
     email: "contact@villalilyblue.com",
     address: {
       "@type": "PostalAddress",

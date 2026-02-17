@@ -6,6 +6,7 @@ import { Button } from "@/components/ui";
 import { motion } from "framer-motion";
 import { ChevronDown, MapPin } from "lucide-react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -20,6 +21,9 @@ export function Hero() {
           alt="Villa Lily Blue - Vue panoramique"
           fill
           priority
+          quality={75}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMCwsKCwsKDA4QDQwNEA4YExERExgcGBYYHCIhIR4dHx8fHx//2wBDAQMEBAUEBQkFBQkfDQsNHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAIABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgcI/8QAIhAAAQQBBAMBAAAAAAAAAAAAAQIDBAUABhESITFBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADB//EABsRAAICAwEAAAAAAAAAAAAAAAECAAMRITFB/9oADAMBAAIRAxEAPwCW6Y1fYadtGaW8gW8W1lkCTFaUXChwA2yobcSSB3jS3xLZ1GtbulEWZe3Fk9GjKLaZEt1xKVEDkQCdtwOzgYxlKtYHshTuTU52f/Z"
           className="object-cover"
           sizes="100vw"
         />
@@ -51,12 +55,12 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-            <Link href="/contact">
+            <Link href="/contact" onClick={() => trackEvent("click", "CTA", "hero_contact")}>
               <Button size="lg" className="w-full text-lg sm:w-auto">
                 {t("cta")}
               </Button>
             </Link>
-            <Link href="/gallery">
+            <Link href="/gallery" onClick={() => trackEvent("click", "CTA", "hero_gallery")}>
               <Button variant="outline" size="lg" className="w-full border-white text-white hover:bg-white hover:text-[var(--secondary)] sm:w-auto">
                 {tCommon("viewGallery")}
               </Button>

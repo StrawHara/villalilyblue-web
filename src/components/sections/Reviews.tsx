@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 const reviews = [
   {
@@ -169,6 +170,7 @@ export function Reviews({ showAll = false, locale = "fr" }: ReviewsProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--primary)] px-6 py-3 font-medium text-[var(--primary)] transition-all hover:bg-[var(--primary)] hover:text-white"
+              onClick={() => trackEvent("click", "outbound", "airbnb_reviews")}
             >
               {t("viewAllOnAirbnb")}
             </a>

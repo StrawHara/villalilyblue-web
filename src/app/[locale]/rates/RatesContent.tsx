@@ -6,6 +6,7 @@ import { Container, Card, CardTitle, Button } from "@/components/ui";
 import { motion } from "framer-motion";
 import { Check, Calendar, CreditCard, Shield, Clock, Sun, Leaf, Snowflake, Star } from "lucide-react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 const seasonConfig = [
   { key: "low", icon: Leaf, color: "border-green-400", badge: "bg-green-100 text-green-700" },
@@ -21,8 +22,55 @@ export function RatesContent() {
 
   const conditionKeys = ["minStay", "deposit", "balance", "security"] as const;
 
+  const aggregateOffer = {
+    "@context": "https://schema.org",
+    "@type": "AggregateOffer",
+    priceCurrency: "EUR",
+    lowPrice: "350",
+    highPrice: "550",
+    offerCount: "4",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Low Season",
+        description: "May - October",
+        price: "350",
+        priceCurrency: "EUR",
+        unitText: "per night",
+      },
+      {
+        "@type": "Offer",
+        name: "Mid Season",
+        description: "November - Mid-December",
+        price: "450",
+        priceCurrency: "EUR",
+        unitText: "per night",
+      },
+      {
+        "@type": "Offer",
+        name: "High Season",
+        description: "Mid-December - April",
+        price: "550",
+        priceCurrency: "EUR",
+        unitText: "per night",
+      },
+      {
+        "@type": "Offer",
+        name: "Holiday Season",
+        description: "December 20 - January 5",
+        price: "0",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/LimitedAvailability",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateOffer) }}
+      />
       {/* Hero Section */}
       <section className="relative flex min-h-[40vh] items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
@@ -31,6 +79,9 @@ export function RatesContent() {
             alt="Villa Lily Blue"
             fill
             priority
+            quality={75}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMCwsKCwsKDA4QDQwNEA4YExERExgcGBYYHCIhIR4dHx8fHx//2wBDAQMEBAUEBQkFBQkfDQsNHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAIABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgcI/8QAIhAAAQQBBAMBAAAAAAAAAAAAAQIDBAUABhESITFBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADB//EABsRAAICAwEAAAAAAAAAAAAAAAECAAMRITFB/9oADAMBAAIRAxEAPwCW6Y1fYadtGaW8gW8W1lkCTFaUXChwA2yobcSSB3jS3xLZ1GtbulEWZe3Fk9GjKLaZEt1xKVEDkQCdtwOzgYxlKtYHshTuTU52f/Z"
             className="object-cover"
             sizes="100vw"
           />
@@ -147,7 +198,7 @@ export function RatesContent() {
               {t("cta")}
             </h2>
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link href="/contact">
+              <Link href="/contact" onClick={() => trackEvent("click", "CTA", "rates_page_contact")}>
                 <Button size="lg">{t("cta")}</Button>
               </Link>
             </div>

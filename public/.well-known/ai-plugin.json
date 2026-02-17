@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Villa Lily Blue",
+  "name_for_model": "villa_lily_blue",
+  "description_for_human": "Luxury vacation villa rental in Anse Marcel, Saint Martin (French Caribbean). 4 bedrooms, heated pool, sea views.",
+  "description_for_model": "Villa Lily Blue is a luxury vacation rental villa in Anse Marcel, Saint Martin (French Caribbean). It features 4 bedrooms with super king beds (2m wide), 5 bathrooms, a heated private pool (10x5m), panoramic sea views, outdoor kitchen, fitness room, and 100 Mbps WiFi. Capacity: 8 guests. Rates from 350 EUR/night. Fully renovated in 2024.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://villalilyblue.com/llms.txt"
+  },
+  "logo_url": "https://villalilyblue.com/images/og-image.jpg",
+  "contact_email": "contact@villalilyblue.com",
+  "legal_info_url": "https://villalilyblue.com/legal"
+}

@@ -1,8 +1,9 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui";
-import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 const quickLinks = [
   { href: "/villa", label: "villa" },
@@ -76,16 +77,10 @@ export function Footer() {
               <a
                 href={`mailto:${tContact("email")}`}
                 className="flex items-center gap-2 text-gray-300 transition-colors hover:text-[var(--primary)]"
+                onClick={() => trackEvent("click", "contact", "footer_email")}
               >
                 <Mail className="h-4 w-4" />
                 {tContact("email")}
-              </a>
-              <a
-                href={`tel:${tContact("phone")}`}
-                className="flex items-center gap-2 text-gray-300 transition-colors hover:text-[var(--primary)]"
-              >
-                <Phone className="h-4 w-4" />
-                {tContact("phone")}
               </a>
               <div className="flex items-center gap-2 text-gray-300">
                 <MapPin className="h-4 w-4" />
@@ -122,6 +117,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-[var(--primary)]"
+              onClick={() => trackEvent("click", "outbound", "airbnb_footer")}
             >
               Airbnb
               <span className="rounded bg-white/10 px-1.5 py-0.5 text-xs">5.0 ★</span>

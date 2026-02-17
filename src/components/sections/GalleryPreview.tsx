@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Container, Button } from "@/components/ui";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 
 const previewImages = [
   { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg", alt: "Vue extérieure" },
@@ -48,6 +49,9 @@ export function GalleryPreview() {
                 src={image.src}
                 alt={image.alt}
                 fill
+                quality={75}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMCwsKCwsKDA4QDQwNEA4YExERExgcGBYYHCIhIR4dHx8fHx//2wBDAQMEBAUEBQkFBQkfDQsNHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAIABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgcI/8QAIhAAAQQBBAMBAAAAAAAAAAAAAQIDBAUABhESITFBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADB//EABsRAAICAwEAAAAAAAAAAAAAAAECAAMRITFB/9oADAMBAAIRAxEAPwCW6Y1fYadtGaW8gW8W1lkCTFaUXChwA2yobcSSB3jS3xLZ1GtbulEWZe3Fk9GjKLaZEt1xKVEDkQCdtwOzgYxlKtYHshTuTU52f/Z"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
@@ -63,7 +67,7 @@ export function GalleryPreview() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-12 text-center"
         >
-          <Link href="/gallery">
+          <Link href="/gallery" onClick={() => trackEvent("click", "CTA", "gallery_preview_view_all")}>
             <Button size="lg">{tCommon("viewGallery")}</Button>
           </Link>
         </motion.div>

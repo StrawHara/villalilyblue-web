@@ -257,6 +257,7 @@ export function GalleryContent() {
                 src={filteredImages[lightboxIndex].src}
                 alt={t(`alt.${filteredImages[lightboxIndex].altKey}`)}
                 fill
+                quality={80}
                 className="object-contain"
                 sizes="100vw"
                 priority
