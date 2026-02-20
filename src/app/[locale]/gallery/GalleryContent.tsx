@@ -30,18 +30,19 @@ const images = [
   { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-ext.jpeg", category: "pool", altKey: "poolTerrace" },
   { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-and-house-01.jpeg", category: "pool", altKey: "villaPool" },
   { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg", category: "pool", altKey: "aerialView" },
-  { src: "/images/villa_lily_blue-sxm_photo-outdoor-kitchen.jpeg", category: "exterior", altKey: "outdoorKitchen" },
-  { src: "/images/villa_lily_blue-sxm_photo-from-sea-map.jpeg", category: "exterior", altKey: "seaView" },
+  { src: "/images/villa_lily_blue-sxm_photo-outdoor-kitchen.jpeg", category: "pool", altKey: "outdoorKitchen" },
+  { src: "/images/villa_lily_blue-sxm_photo-from-sea-map.jpeg", category: "pool", altKey: "seaView" },
   { src: "/images/villa_lily_blue-sxm_photo-master-view-hero.jpg", category: "views", altKey: "panoramicLiving" },
   { src: "/images/villa_lily_blue-sxm_photo-master-view-hero-01.jpeg", category: "views", altKey: "oceanView" },
   { src: "/images/villa_lily_blue-sxm_photo-master-view-hero-02.jpeg", category: "views", altKey: "terraceView" },
   { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-beach.jpg", category: "views", altKey: "anseMarcelBeach" },
   { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-beach-02.jpg", category: "views", altKey: "anseMarcelBay" },
+  { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-beach-03.webp", category: "views", altKey: "anseMarcelBeach3" },
   { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-beach-aerial.webp", category: "views", altKey: "anseMarcelBeachAerial" },
   { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-bay-aerial.webp", category: "views", altKey: "anseMarcelBayAerial" },
 ];
 
-const categoryKeys = ["all", "exterior", "interior", "pool", "views", "bedrooms"] as const;
+const categoryKeys = ["all", "pool", "interior", "views", "bedrooms"] as const;
 
 export function GalleryContent() {
   const t = useTranslations("gallery");

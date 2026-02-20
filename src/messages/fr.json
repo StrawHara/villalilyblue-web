@@ -121,9 +121,8 @@
     "subtitle": "Découvrez Villa Lily Blue en images",
     "categories": {
       "all": "Toutes",
-      "exterior": "Extérieur",
       "interior": "Intérieur",
-      "pool": "Piscine",
+      "pool": "Piscine / Extérieur",
       "views": "Vues",
       "bedrooms": "Chambres"
     },
@@ -157,6 +156,7 @@
       "terraceView": "Vue depuis la terrasse",
       "anseMarcelBeach": "Plage d'Anse Marcel",
       "anseMarcelBay": "Baie d'Anse Marcel",
+      "anseMarcelBeach3": "Plage d'Anse Marcel - sable blanc",
       "anseMarcelBeachAerial": "Plage d'Anse Marcel - vue aérienne",
       "anseMarcelBayAerial": "Baie d'Anse Marcel - vue aérienne"
     }

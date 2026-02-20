@@ -88,7 +88,7 @@ export function LocationContent() {
               className="relative aspect-video overflow-hidden rounded-2xl shadow-2xl"
             >
               <Image
-                src="/images/villa_lily_blue-sxm_photo-anse-marcel-beach-02.jpg"
+                src="/images/villa_lily_blue-sxm_photo-anse-marcel-beach-03.webp"
                 alt="Baie d'Anse Marcel"
                 fill
                 className="object-cover"
