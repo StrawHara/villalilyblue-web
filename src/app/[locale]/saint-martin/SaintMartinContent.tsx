@@ -147,8 +147,8 @@ export function SaintMartinContent() {
               className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl"
             >
               <Image
-                src="/images/villa_lily_blue-sxm_photo-outdoor-kitchen.jpeg"
-                alt="Gastronomie Saint Martin"
+                src="/images/villa_lily_blue-sxm_photo-anse-marcel-bay-aerial.webp"
+                alt="Baie d'Anse Marcel"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

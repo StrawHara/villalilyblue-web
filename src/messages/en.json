@@ -10,7 +10,6 @@
     "amenities": "Amenities",
     "gallery": "Gallery",
     "location": "Location",
-    "rates": "Rates",
     "services": "Concierge",
     "contact": "Contact"
   },
@@ -70,15 +69,15 @@
       },
       "bedroom2": {
         "title": "Bedroom 2",
-        "description": "Super king bed (2m wide), attached bathroom, air conditioning, garden view."
+        "description": "Super king bed (2m wide), attached bathroom, air conditioning, sea view, pool access."
       },
       "bedroom3": {
         "title": "Bedroom 3",
-        "description": "Two single beds (convertible to super king 2m), bathroom, ideal for children."
+        "description": "Super king bed (2m wide), bathroom, sea view, pool access, mezzanine office."
       },
       "bedroom4": {
         "title": "Bedroom 4",
-        "description": "Super king bed (2m wide), bathroom, direct access to the pool."
+        "description": "Queen bed (160 cm), bathroom, direct access to the pool, ideal for children."
       }
     },
     "living": {
@@ -102,7 +101,7 @@
       },
       "comfort": {
         "title": "Comfort",
-        "items": ["Air conditioning in all rooms", "100 Mbps fiber WiFi", "Flat screen TV", "Bluetooth speakers", "Fitness room", "Safe"]
+        "items": ["Air conditioning in all rooms", "100 Mbps fiber WiFi", "Flat screen TV", "Bluetooth speakers", "Fitness room", "Safe", "Bathroom scale", "Bed linen, towels and bathrobes"]
       },
       "services": {
         "title": "Included Services",
@@ -157,7 +156,9 @@
       "oceanView": "Ocean view",
       "terraceView": "Terrace view",
       "anseMarcelBeach": "Anse Marcel Beach",
-      "anseMarcelBay": "Anse Marcel Bay"
+      "anseMarcelBay": "Anse Marcel Bay",
+      "anseMarcelBeachAerial": "Anse Marcel Beach - aerial view",
+      "anseMarcelBayAerial": "Anse Marcel Bay - aerial view"
     }
   },
   "location": {
@@ -198,7 +199,7 @@
     }
   },
   "rates": {
-    "metaDescription": "Villa Lily Blue rates in Saint Martin: from $380/night in low season. 4 seasonal rates, minimum 5-night stay. Request your personalized quote.",
+    "metaDescription": "Villa Lily Blue rates in Saint Martin: from $380/night in low season. 4 seasonal rates, minimum 5 to 7-night stay. Request your personalized quote.",
     "metaKeywords": "villa rates saint martin, anse marcel villa price, luxury villa cost caribbean, villa booking antilles",
     "title": "Rates & Booking",
     "subtitle": "Plan your stay",
@@ -230,7 +231,7 @@
     },
     "conditions": {
       "title": "Conditions",
-      "minStay": "Minimum stay: 5 nights (7 nights in high season)",
+      "minStay": "Minimum stay: 5 to 7 nights depending on the season",
       "deposit": "Deposit: 30% at booking",
       "balance": "Balance: 30 days before arrival",
       "security": "Security deposit: $1,600 (refunded after check-out)"
@@ -271,7 +272,7 @@
         },
         {
           "question": "Is there a minimum stay?",
-          "answer": "Yes, the minimum stay is 5 nights (7 nights during high season and holidays)."
+          "answer": "Yes, the minimum stay is 5 to 7 nights depending on the season."
         },
         {
           "question": "Are pets allowed?",
@@ -279,7 +280,7 @@
         },
         {
           "question": "How does arrival work?",
-          "answer": "We organize a personal welcome. A representative will be waiting for you at the villa to hand over the keys and give you a tour."
+          "answer": "We organize a personalized welcome. Our concierge will be waiting for you at the villa to hand over the keys and give you a tour."
         }
       ]
     }
@@ -327,6 +328,7 @@
   },
   "footer": {
     "description": "Luxury sea view villa in Anse Marcel, Saint Martin. Private pool, 4 bedrooms, idyllic setting for unforgettable holidays.",
+    "menu": "Menu",
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "followUs": "Follow Us",
@@ -465,23 +467,12 @@
           "Personal trainer"
         ]
       },
-      "provisions": {
-        "title": "Groceries & Provisions",
-        "description": "Arrive at an already stocked villa.",
-        "items": [
-          "Welcome groceries",
-          "Personalized provisioning",
-          "Wine and champagne orders",
-          "Local and organic products"
-        ]
-      },
       "events": {
         "title": "Private Events",
         "description": "Celebrate your special moments in an exceptional setting.",
         "items": [
           "Birthday organization",
           "Romantic dinner",
-          "Wedding celebration",
           "Corporate events"
         ]
       }

@@ -96,7 +96,7 @@ export function ContactContent() {
               {/* Map Preview */}
               <Card className="overflow-hidden p-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d-63.0319!3d18.1097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA2JzM1LjAiTiA2M8KwMDEnNTQuOCJX!5e0!3m2!1sfr!2sfr!4v1704300000000!5m2!1sfr!2sfr"
+                  src="https://www.google.com/maps?q=Villa+Lily+Blue,+Anse+Marcel,+97150+Saint+Martin&z=14&output=embed"
                   width="100%"
                   height="200"
                   style={{ border: 0 }}

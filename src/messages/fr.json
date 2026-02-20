@@ -10,7 +10,6 @@
     "amenities": "Équipements",
     "gallery": "Galerie",
     "location": "Localisation",
-    "rates": "Tarifs",
     "services": "Conciergerie",
     "contact": "Contact"
   },
@@ -70,15 +69,15 @@
       },
       "bedroom2": {
         "title": "Chambre 2",
-        "description": "Lit super king (2m de large), salle de bain attenante, climatisation, vue jardin."
+        "description": "Lit super king (2m de large), salle de bain attenante, climatisation, vue mer, accès piscine."
       },
       "bedroom3": {
         "title": "Chambre 3",
-        "description": "Deux lits simples (convertibles en super king 2m), salle de bain, idéale pour enfants."
+        "description": "Lit super king (2m de large), salle de bain, vue mer, accès piscine, bureau en mezzanine."
       },
       "bedroom4": {
         "title": "Chambre 4",
-        "description": "Lit super king (2m de large), salle de bain, accès direct à la piscine."
+        "description": "Lit queen (160 cm), salle de bain, accès direct à la piscine, idéale pour enfants."
       }
     },
     "living": {
@@ -102,7 +101,7 @@
       },
       "comfort": {
         "title": "Confort",
-        "items": ["Climatisation dans toutes les pièces", "WiFi fibre 100 Mbps", "TV écran plat", "Enceintes Bluetooth", "Salle de fitness", "Coffre-fort"]
+        "items": ["Climatisation dans toutes les pièces", "WiFi fibre 100 Mbps", "TV écran plat", "Enceintes Bluetooth", "Salle de fitness", "Coffre-fort", "Balance dans salle de bain", "Draps, serviettes et peignoirs"]
       },
       "services": {
         "title": "Services Inclus",
@@ -157,7 +156,9 @@
       "oceanView": "Vue sur la mer",
       "terraceView": "Vue depuis la terrasse",
       "anseMarcelBeach": "Plage d'Anse Marcel",
-      "anseMarcelBay": "Baie d'Anse Marcel"
+      "anseMarcelBay": "Baie d'Anse Marcel",
+      "anseMarcelBeachAerial": "Plage d'Anse Marcel - vue aérienne",
+      "anseMarcelBayAerial": "Baie d'Anse Marcel - vue aérienne"
     }
   },
   "location": {
@@ -198,7 +199,7 @@
     }
   },
   "rates": {
-    "metaDescription": "Tarifs de Villa Lily Blue à Saint Martin : à partir de 350€/nuit en basse saison. 4 saisons tarifaires, séjour minimum 5 nuits. Demandez votre devis personnalisé.",
+    "metaDescription": "Tarifs de Villa Lily Blue à Saint Martin : à partir de 350€/nuit en basse saison. 4 saisons tarifaires, séjour minimum 5 à 7 nuits. Demandez votre devis personnalisé.",
     "metaKeywords": "tarif villa saint martin, prix location villa anse marcel, coût villa luxe caraïbes, réservation villa antilles",
     "title": "Tarifs & Réservation",
     "subtitle": "Planifiez votre séjour",
@@ -230,7 +231,7 @@
     },
     "conditions": {
       "title": "Conditions",
-      "minStay": "Séjour minimum : 5 nuits (7 nuits en haute saison)",
+      "minStay": "Séjour minimum : 5 à 7 nuits selon la saison",
       "deposit": "Acompte : 30% à la réservation",
       "balance": "Solde : 30 jours avant l'arrivée",
       "security": "Caution : 1500€ (restituée après état des lieux)"
@@ -271,7 +272,7 @@
         },
         {
           "question": "Y a-t-il un séjour minimum ?",
-          "answer": "Oui, le séjour minimum est de 5 nuits (7 nuits en haute saison et pendant les fêtes)."
+          "answer": "Oui, le séjour minimum est de 5 à 7 nuits selon la saison."
         },
         {
           "question": "Les animaux sont-ils acceptés ?",
@@ -279,7 +280,7 @@
         },
         {
           "question": "Comment se passe l'arrivée ?",
-          "answer": "Nous organisons un accueil personnalisé. Un représentant vous attendra à la villa pour vous remettre les clés et vous faire visiter."
+          "answer": "Nous organisons un accueil personnalisé. Notre concierge vous attendra à la villa pour vous remettre les clés et vous faire visiter."
         }
       ]
     }
@@ -327,6 +328,7 @@
   },
   "footer": {
     "description": "Villa de luxe avec vue mer à Anse Marcel, Saint Martin. Piscine privée, 4 chambres, cadre idyllique pour des vacances inoubliables.",
+    "menu": "Menu",
     "quickLinks": "Liens rapides",
     "contact": "Contact",
     "followUs": "Suivez-nous",
@@ -465,23 +467,12 @@
           "Coach sportif"
         ]
       },
-      "provisions": {
-        "title": "Courses & Provisions",
-        "description": "Arrivez dans une villa déjà approvisionnée.",
-        "items": [
-          "Courses de bienvenue",
-          "Approvisionnement personnalisé",
-          "Commande de vins et champagnes",
-          "Produits locaux et bio"
-        ]
-      },
       "events": {
         "title": "Événements Privés",
         "description": "Célébrez vos moments importants dans un cadre exceptionnel.",
         "items": [
           "Organisation d'anniversaires",
           "Dîner romantique",
-          "Célébration de mariage",
           "Événements d'entreprise"
         ]
       }

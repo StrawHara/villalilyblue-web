@@ -48,15 +48,6 @@ export function CallToAction() {
                 {t("cta")}
               </Button>
             </Link>
-            <Link href="/rates" onClick={() => trackEvent("click", "CTA", "cta_section_rates")}>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-[var(--secondary)]"
-              >
-                {t("title")}
-              </Button>
-            </Link>
           </div>
         </motion.div>
       </Container>

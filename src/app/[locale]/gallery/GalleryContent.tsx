@@ -19,7 +19,6 @@ const images = [
   { src: "/images/villa_lily_blue-sxm_photo-living-room-01-2.jpg", category: "interior", altKey: "livingSpace" },
   { src: "/images/villa_lily_blue-sxm_photo-living-room-04.jpeg", category: "interior", altKey: "lounge" },
   { src: "/images/villa_lily_blue-sxm_photo-kitchen.jpg", category: "interior", altKey: "kitchen" },
-  { src: "/images/villa_lily_blue-sxm_photo-kitchen-02.webp", category: "interior", altKey: "kitchenEquipped" },
   { src: "/images/villa_lily_blue-sxm_photo-kitchen-03.jpg", category: "interior", altKey: "dining" },
   { src: "/images/villa_lily_blue-sxm_photo-fitness-room.jpeg", category: "interior", altKey: "fitness" },
   { src: "/images/villa_lily_blue-sxm_photo-bathroom-01.jpg", category: "interior", altKey: "bathroom1" },
@@ -38,6 +37,8 @@ const images = [
   { src: "/images/villa_lily_blue-sxm_photo-master-view-hero-02.jpeg", category: "views", altKey: "terraceView" },
   { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-beach.jpg", category: "views", altKey: "anseMarcelBeach" },
   { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-beach-02.jpg", category: "views", altKey: "anseMarcelBay" },
+  { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-beach-aerial.webp", category: "views", altKey: "anseMarcelBeachAerial" },
+  { src: "/images/villa_lily_blue-sxm_photo-anse-marcel-bay-aerial.webp", category: "views", altKey: "anseMarcelBayAerial" },
 ];
 
 const categoryKeys = ["all", "exterior", "interior", "pool", "views", "bedrooms"] as const;

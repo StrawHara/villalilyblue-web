@@ -24,7 +24,7 @@ export function VillaContent() {
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/villa_lily_blue-sxm_photo-swimming-pool-and-house-01.jpeg"
+            src="/images/villa_lily_blue-sxm_photo-master-view-hero-01.jpeg"
             alt="Villa Lily Blue"
             fill
             priority
@@ -101,7 +101,7 @@ export function VillaContent() {
               className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl"
             >
               <Image
-                src="/images/villa_lily_blue-sxm_photo-living-room-01-2.jpg"
+                src="/images/villa_lily_blue-sxm_photo-master-view-hero.jpg"
                 alt="Intérieur Villa Lily Blue"
                 fill
                 className="object-cover"
@@ -169,7 +169,7 @@ export function VillaContent() {
               className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl lg:order-2"
             >
               <Image
-                src="/images/villa_lily_blue-sxm_photo-kitchen-03.jpg"
+                src="/images/villa_lily_blue-sxm_photo-living-room-04.jpeg"
                 alt="Salon Villa Lily Blue"
                 fill
                 className="object-cover"

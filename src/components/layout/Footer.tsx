@@ -7,18 +7,18 @@ import { Mail, MapPin, Instagram } from "lucide-react";
 import Image from "next/image";
 import { trackEvent } from "@/lib/analytics";
 
-const quickLinks = [
+const menuLinks = [
   { href: "/villa", label: "villa" },
   { href: "/amenities", label: "amenities" },
   { href: "/gallery", label: "gallery" },
-  { href: "/rates", label: "rates" },
   { href: "/services", label: "services" },
   { href: "/contact", label: "contact" },
 ] as const;
 
-const destinationLinks = [
+const quickLinks = [
   { href: "/anse-marcel", label: "Anse Marcel" },
   { href: "/saint-martin", label: "Saint Martin" },
+  { href: "/location", label: "location" },
 ] as const;
 
 export function Footer() {
@@ -30,9 +30,9 @@ export function Footer() {
   return (
     <footer className="bg-[var(--secondary)] text-white">
       <Container className="py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
           {/* Logo & Description */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-4">
             <Link href="/" className="mb-4 flex items-center gap-2">
               <div className="relative h-10 w-10">
                 <Image
@@ -47,11 +47,11 @@ export function Footer() {
             <p className="text-sm text-gray-300">{t("description")}</p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="mb-4 text-lg font-semibold">{t("quickLinks")}</h4>
+          {/* Menu */}
+          <div className="lg:col-span-2">
+            <h4 className="mb-4 text-lg font-semibold">{t("menu")}</h4>
             <nav className="flex flex-col gap-2">
-              {quickLinks.map((link) => (
+              {menuLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -60,20 +60,27 @@ export function Footer() {
                   {tNav(link.label)}
                 </Link>
               ))}
-              {destinationLinks.map((link) => (
+            </nav>
+          </div>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-2">
+            <h4 className="mb-4 text-lg font-semibold">{t("quickLinks")}</h4>
+            <nav className="flex flex-col gap-2">
+              {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className="text-gray-300 transition-colors hover:text-[var(--primary)]"
                 >
-                  {link.label}
+                  {link.label === "location" ? tNav(link.label) : link.label}
                 </Link>
               ))}
             </nav>
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="lg:col-span-2">
             <h4 className="mb-4 text-lg font-semibold">{t("contact")}</h4>
             <div className="flex flex-col gap-3">
               <a
@@ -92,7 +99,7 @@ export function Footer() {
           </div>
 
           {/* Social & Airbnb */}
-          <div>
+          <div className="lg:col-span-2">
             <h4 className="mb-4 text-lg font-semibold">{t("followUs")}</h4>
             <div className="flex gap-4">
               <a

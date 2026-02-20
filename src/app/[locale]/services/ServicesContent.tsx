@@ -11,7 +11,6 @@ import {
   Car,
   Compass,
   Heart,
-  ShoppingBag,
   PartyPopper,
   Check,
 } from "lucide-react";
@@ -24,7 +23,6 @@ const categoryConfig = [
   { key: "transport", icon: Car, color: "bg-green-500" },
   { key: "excursions", icon: Compass, color: "bg-cyan-500" },
   { key: "wellness", icon: Heart, color: "bg-purple-500" },
-  { key: "provisions", icon: ShoppingBag, color: "bg-yellow-500" },
   { key: "events", icon: PartyPopper, color: "bg-red-500" },
 ] as const;
 

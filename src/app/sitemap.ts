@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/villa",
     "/amenities",
     "/gallery",
-    "/rates",
     "/location",
     "/services",
     "/contact",

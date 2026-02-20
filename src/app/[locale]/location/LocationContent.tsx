@@ -132,6 +132,44 @@ export function LocationContent() {
         </Container>
       </section>
 
+      {/* Anse Marcel Photos */}
+      <section className="py-24">
+        <Container>
+          <div className="grid gap-6 md:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative aspect-video overflow-hidden rounded-2xl shadow-2xl"
+            >
+              <Image
+                src="/images/villa_lily_blue-sxm_photo-anse-marcel-beach-aerial.webp"
+                alt="Plage d'Anse Marcel - vue aérienne"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="relative aspect-video overflow-hidden rounded-2xl shadow-2xl"
+            >
+              <Image
+                src="/images/villa_lily_blue-sxm_photo-anse-marcel-bay-aerial.webp"
+                alt="Baie d'Anse Marcel - vue aérienne"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+          </div>
+        </Container>
+      </section>
+
       {/* Map */}
       <section className="py-24">
         <Container>
@@ -143,7 +181,7 @@ export function LocationContent() {
             className="overflow-hidden rounded-2xl shadow-2xl"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8!2d-63.0319!3d18.1097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA2JzM1LjAiTiA2M8KwMDEnNTQuOCJX!5e0!3m2!1sfr!2sfr!4v1704300000000!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps?q=Villa+Lily+Blue,+Anse+Marcel,+97150+Saint+Martin&z=14&output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}

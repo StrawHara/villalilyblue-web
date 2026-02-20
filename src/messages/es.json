@@ -10,7 +10,6 @@
     "amenities": "Equipamiento",
     "gallery": "Galería",
     "location": "Ubicación",
-    "rates": "Tarifas",
     "services": "Conserjería",
     "contact": "Contacto"
   },
@@ -70,15 +69,15 @@
       },
       "bedroom2": {
         "title": "Habitación 2",
-        "description": "Cama super king (2m de ancho), baño privado, aire acondicionado, vista al jardín."
+        "description": "Cama super king (2m de ancho), baño privado, aire acondicionado, vista al mar, acceso a la piscina."
       },
       "bedroom3": {
         "title": "Habitación 3",
-        "description": "Dos camas individuales (convertibles en super king 2m), baño, ideal para niños."
+        "description": "Cama super king (2m de ancho), baño, vista al mar, acceso a la piscina, oficina en entresuelo."
       },
       "bedroom4": {
         "title": "Habitación 4",
-        "description": "Cama super king (2m de ancho), baño, acceso directo a la piscina."
+        "description": "Cama queen (160 cm), baño, acceso directo a la piscina, ideal para niños."
       }
     },
     "living": {
@@ -102,7 +101,7 @@
       },
       "comfort": {
         "title": "Confort",
-        "items": ["Aire acondicionado en todas las habitaciones", "WiFi fibra 100 Mbps", "Televisor de pantalla plana", "Altavoces Bluetooth", "Sala de fitness", "Caja fuerte"]
+        "items": ["Aire acondicionado en todas las habitaciones", "WiFi fibra 100 Mbps", "Televisor de pantalla plana", "Altavoces Bluetooth", "Sala de fitness", "Caja fuerte", "Báscula en el baño", "Sábanas, toallas y albornoces"]
       },
       "services": {
         "title": "Servicios Incluidos",
@@ -157,7 +156,9 @@
       "oceanView": "Vista al océano",
       "terraceView": "Vista desde la terraza",
       "anseMarcelBeach": "Playa de Anse Marcel",
-      "anseMarcelBay": "Bahía de Anse Marcel"
+      "anseMarcelBay": "Bahía de Anse Marcel",
+      "anseMarcelBeachAerial": "Playa de Anse Marcel - vista aérea",
+      "anseMarcelBayAerial": "Bahía de Anse Marcel - vista aérea"
     }
   },
   "location": {
@@ -198,7 +199,7 @@
     }
   },
   "rates": {
-    "metaDescription": "Tarifas de Villa Lily Blue en Saint Martin: desde $380/noche en temporada baja. 4 temporadas, estancia mínima de 5 noches. Solicite su presupuesto personalizado.",
+    "metaDescription": "Tarifas de Villa Lily Blue en Saint Martin: desde $380/noche en temporada baja. 4 temporadas, estancia mínima de 5 a 7 noches. Solicite su presupuesto personalizado.",
     "metaKeywords": "tarifas villa saint martin, precio alquiler villa anse marcel, coste villa lujo caribe, reserva villa antillas",
     "title": "Tarifas y Reservas",
     "subtitle": "Planifique su estancia",
@@ -230,7 +231,7 @@
     },
     "conditions": {
       "title": "Condiciones",
-      "minStay": "Estancia mínima: 5 noches (7 noches en temporada alta)",
+      "minStay": "Estancia mínima: de 5 a 7 noches según la temporada",
       "deposit": "Depósito: 30% en la reserva",
       "balance": "Saldo: 30 días antes de la llegada",
       "security": "Fianza: $1,600 (reembolsada tras la salida)"
@@ -271,7 +272,7 @@
         },
         {
           "question": "¿Hay una estancia mínima?",
-          "answer": "Sí, la estancia mínima es de 5 noches (7 noches durante la temporada alta y los días festivos)."
+          "answer": "Sí, la estancia mínima es de 5 a 7 noches según la temporada."
         },
         {
           "question": "¿Se admiten mascotas?",
@@ -279,7 +280,7 @@
         },
         {
           "question": "¿Cómo funciona la llegada?",
-          "answer": "Organizamos una bienvenida personalizada. Un representante le esperará en la villa para entregarle las llaves y mostrarle las instalaciones."
+          "answer": "Organizamos una bienvenida personalizada. Nuestro concierge le esperará en la villa para entregarle las llaves y mostrarle las instalaciones."
         }
       ]
     }
@@ -327,6 +328,7 @@
   },
   "footer": {
     "description": "Villa de lujo con vista al mar en Anse Marcel, Saint Martin. Piscina privada, 4 habitaciones, entorno idílico para unas vacaciones inolvidables.",
+    "menu": "Menú",
     "quickLinks": "Enlaces Rápidos",
     "contact": "Contacto",
     "followUs": "Síguenos",
@@ -465,23 +467,12 @@
           "Entrenador personal"
         ]
       },
-      "provisions": {
-        "title": "Compras y Provisiones",
-        "description": "Llegue a una villa ya aprovisionada.",
-        "items": [
-          "Compras de bienvenida",
-          "Aprovisionamiento personalizado",
-          "Pedidos de vino y champán",
-          "Productos locales y ecológicos"
-        ]
-      },
       "events": {
         "title": "Eventos Privados",
         "description": "Celebre sus momentos especiales en un entorno excepcional.",
         "items": [
           "Organización de cumpleaños",
           "Cena romántica",
-          "Celebración de boda",
           "Eventos corporativos"
         ]
       }

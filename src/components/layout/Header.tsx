@@ -13,7 +13,6 @@ const navItems = [
   { href: "/villa", label: "villa" },
   { href: "/amenities", label: "amenities" },
   { href: "/gallery", label: "gallery" },
-  { href: "/rates", label: "rates" },
   { href: "/location", label: "location" },
   { href: "/services", label: "services" },
   { href: "/contact", label: "contact" },
