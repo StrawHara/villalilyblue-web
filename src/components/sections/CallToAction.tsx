@@ -36,12 +36,9 @@ export function CallToAction() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center text-white"
         >
-          <h2 className="mb-6 text-3xl font-bold md:text-5xl">
+          <h2 className="mb-8 text-3xl font-bold md:text-5xl">
             {tHero("subtitle")}
           </h2>
-          <p className="mb-8 text-lg text-white/80">
-            {t("seasons.low.price")} - {t("seasons.high.price")}
-          </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link href="/contact" onClick={() => trackEvent("click", "CTA", "cta_section_contact")}>
               <Button size="lg" className="text-lg">

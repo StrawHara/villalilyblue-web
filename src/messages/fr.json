@@ -199,43 +199,6 @@
     }
   },
   "rates": {
-    "metaDescription": "Tarifs de Villa Lily Blue à Saint Martin : à partir de 350€/nuit en basse saison. 4 saisons tarifaires, séjour minimum 5 à 7 nuits. Demandez votre devis personnalisé.",
-    "metaKeywords": "tarif villa saint martin, prix location villa anse marcel, coût villa luxe caraïbes, réservation villa antilles",
-    "title": "Tarifs & Réservation",
-    "subtitle": "Planifiez votre séjour",
-    "seasons": {
-      "low": {
-        "name": "Basse Saison",
-        "period": "Mai - Octobre",
-        "price": "À partir de 350€ / nuit"
-      },
-      "mid": {
-        "name": "Moyenne Saison",
-        "period": "Novembre - Mi-Décembre",
-        "price": "À partir de 450€ / nuit"
-      },
-      "high": {
-        "name": "Haute Saison",
-        "period": "Mi-Décembre - Avril",
-        "price": "À partir de 550€ / nuit"
-      },
-      "peak": {
-        "name": "Fêtes de fin d'année",
-        "period": "20 Déc - 5 Jan",
-        "price": "Sur demande"
-      }
-    },
-    "includes": {
-      "title": "Le tarif inclut",
-      "items": ["Ménage de fin de séjour", "Draps et serviettes", "Serviettes de plage", "WiFi", "Accueil personnalisé", "Taxes locales"]
-    },
-    "conditions": {
-      "title": "Conditions",
-      "minStay": "Séjour minimum : 5 à 7 nuits selon la saison",
-      "deposit": "Acompte : 30% à la réservation",
-      "balance": "Solde : 30 jours avant l'arrivée",
-      "security": "Caution : 1500€ (restituée après état des lieux)"
-    },
     "cta": "Demander un devis"
   },
   "contact": {
