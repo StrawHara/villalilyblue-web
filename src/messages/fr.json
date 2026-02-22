@@ -41,7 +41,7 @@
       },
       "comfort": {
         "title": "Confort Absolu",
-        "description": "4 chambres climatisées, cuisine équipée, WiFi fibre 100 Mbps, salle de fitness et tout le nécessaire."
+        "description": "4 chambres climatisées, cuisine équipée, WiFi Starlink haut débit, salle de fitness et tout le nécessaire."
       }
     },
     "galleryPreview": "Découvrir la villa en images",
@@ -86,8 +86,8 @@
     }
   },
   "amenities": {
-    "metaDescription": "Équipements de Villa Lily Blue : piscine chauffée 10x5m, cuisine équipée, WiFi fibre 100 Mbps, salle de fitness, climatisation. Tout pour un séjour parfait à Saint Martin.",
-    "metaKeywords": "équipements villa saint martin, piscine chauffée privée, villa tout confort caraïbes, wifi fibre villa, salle fitness villa",
+    "metaDescription": "Équipements de Villa Lily Blue : piscine chauffée 10x5m, cuisine équipée, WiFi Starlink haut débit, salle de fitness, climatisation. Tout pour un séjour parfait à Saint Martin.",
+    "metaKeywords": "équipements villa saint martin, piscine chauffée privée, villa tout confort caraïbes, wifi starlink villa, salle fitness villa",
     "title": "Équipements & Services",
     "subtitle": "Tout pour un séjour parfait",
     "categories": {
@@ -101,7 +101,7 @@
       },
       "comfort": {
         "title": "Confort",
-        "items": ["Climatisation dans toutes les pièces", "WiFi fibre 100 Mbps", "TV écran plat", "Enceintes Bluetooth", "Salle de fitness", "Coffre-fort", "Balance dans salle de bain", "Draps, serviettes et peignoirs"]
+        "items": ["Climatisation dans toutes les pièces", "WiFi Starlink haut débit", "TV écran plat", "Sonorisation Sonos", "Salle de fitness", "Coffre-fort", "Balance dans salle de bain", "Draps, serviettes et peignoirs"]
       },
       "services": {
         "title": "Services Inclus",

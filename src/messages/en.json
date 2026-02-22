@@ -41,7 +41,7 @@
       },
       "comfort": {
         "title": "Absolute Comfort",
-        "description": "4 air-conditioned bedrooms, fully equipped kitchen, 100 Mbps WiFi, fitness room and everything you need."
+        "description": "4 air-conditioned bedrooms, fully equipped kitchen, Starlink WiFi, fitness room and everything you need."
       }
     },
     "galleryPreview": "Discover the villa in pictures",
@@ -86,8 +86,8 @@
     }
   },
   "amenities": {
-    "metaDescription": "Villa Lily Blue amenities: heated pool 33x16ft, fully equipped kitchen, 100 Mbps fiber WiFi, fitness room, air conditioning. Everything for a perfect stay in Saint Martin.",
-    "metaKeywords": "villa amenities saint martin, heated private pool, fully equipped villa caribbean, fiber wifi villa, fitness room villa",
+    "metaDescription": "Villa Lily Blue amenities: heated pool 33x16ft, fully equipped kitchen, Starlink high-speed WiFi, fitness room, air conditioning. Everything for a perfect stay in Saint Martin.",
+    "metaKeywords": "villa amenities saint martin, heated private pool, fully equipped villa caribbean, starlink wifi villa, fitness room villa",
     "title": "Amenities & Services",
     "subtitle": "Everything for a perfect stay",
     "categories": {
@@ -101,7 +101,7 @@
       },
       "comfort": {
         "title": "Comfort",
-        "items": ["Air conditioning in all rooms", "100 Mbps fiber WiFi", "Flat screen TV", "Bluetooth speakers", "Fitness room", "Safe", "Bathroom scale", "Bed linen, towels and bathrobes"]
+        "items": ["Air conditioning in all rooms", "Starlink high-speed WiFi", "Flat screen TV", "Sonos sound system", "Fitness room", "Safe", "Bathroom scale", "Bed linen, towels and bathrobes"]
       },
       "services": {
         "title": "Included Services",
