@@ -70,7 +70,7 @@ export function AnseMarcelContent() {
             >
               <Image
                 src="/images/villa_lily_blue-sxm_photo-anse-marcel-beach-02.jpg"
-                alt="Vue d'Anse Marcel"
+                alt={t("imageAlts.bay")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -213,17 +213,17 @@ export function AnseMarcelContent() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="mb-6 text-3xl font-bold text-[var(--secondary)]">
-              Séjournez à Anse Marcel
+              {t("cta.title")}
             </h2>
             <p className="mb-8 text-lg text-gray-600">
-              Villa Lily Blue vous accueille sur les hauteurs d'Anse Marcel avec une vue imprenable sur la baie.
+              {t("cta.description")}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/villa">
-                <Button>Découvrir la villa</Button>
+                <Button>{t("cta.discoverVilla")}</Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline">Réserver</Button>
+                <Button variant="outline">{t("cta.book")}</Button>
               </Link>
             </div>
           </motion.div>

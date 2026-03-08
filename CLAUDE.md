@@ -20,7 +20,7 @@ src/
 │   ├── not-found.tsx       # Custom 404
 │   ├── villa/              # Villa description
 │   ├── amenities/          # Amenities & equipment
-│   ├── gallery/            # Photo gallery (30 images, lightbox)
+│   ├── gallery/            # Photo gallery (31 images, lightbox, 4 categories)
 │   ├── location/           # Location & distances
 │   ├── services/           # Concierge services (7 categories)
 │   ├── contact/            # Contact form + FAQ
@@ -69,10 +69,11 @@ NEXT_PUBLIC_GA_ID=G-LE74ZXQJ68
 
 ## SEO & Structured Data
 
-- **JSON-LD schemas**: LodgingBusiness, AggregateRating (5.0/5, 15 reviews), 6 individual Reviews, FAQPage, BreadcrumbList, AggregateOffer
+- **JSON-LD schemas**: LodgingBusiness, AggregateRating (5.0/5, 15 reviews), 6 individual Reviews, FAQPage (contact page), BreadcrumbList (all pages), WebSite
 - **LLM discoverability**: `public/llms.txt` + `public/.well-known/ai-plugin.json`
-- **Redirects**: `/rooms` → `/villa` (301)
+- **Redirects**: `/rooms` → `/fr/villa` (301), `/:locale/rooms` → `/:locale/villa` (301)
 - **Security headers**: HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
+- **Cache busting**: `generateBuildId` (unique per build) + `Cache-Control: max-age=0, must-revalidate` on HTML, `immutable` on `/_next/static/`
 
 ## Common Commands
 

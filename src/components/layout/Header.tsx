@@ -87,6 +87,7 @@ export function Header() {
                 alt="Villa Lily Blue"
                 fill
                 className="object-contain"
+                sizes="48px"
                 priority
               />
             </div>

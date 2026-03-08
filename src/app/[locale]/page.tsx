@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Hero, Highlights, Welcome, GalleryPreview, CallToAction } from "@/components/sections";
 import { Reviews } from "@/components/sections/Reviews";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { JsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         fr: "/fr",
         en: "/en",
         es: "/es",
+        "x-default": "/fr",
       },
     },
     openGraph: {
@@ -38,6 +39,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd />
+      <BreadcrumbJsonLd items={[]} />
       <Hero />
       <Welcome />
       <Highlights />

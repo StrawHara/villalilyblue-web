@@ -148,7 +148,7 @@ export function SaintMartinContent() {
             >
               <Image
                 src="/images/villa_lily_blue-sxm_photo-anse-marcel-bay-aerial.webp"
-                alt="Baie d'Anse Marcel"
+                alt={t("imageAlts.bay")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -256,17 +256,17 @@ export function SaintMartinContent() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="mb-6 text-3xl font-bold text-[var(--secondary)]">
-              Votre séjour à Saint Martin
+              {t("cta.title")}
             </h2>
             <p className="mb-8 text-lg text-gray-600">
-              Villa Lily Blue est idéalement située pour découvrir toutes les richesses de l'île.
+              {t("cta.description")}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/villa">
-                <Button>Découvrir la villa</Button>
+                <Button>{t("cta.discoverVilla")}</Button>
               </Link>
               <Link href="/anse-marcel">
-                <Button variant="outline">En savoir plus sur Anse Marcel</Button>
+                <Button variant="outline">{t("cta.learnMoreAnseMarcel")}</Button>
               </Link>
             </div>
           </motion.div>

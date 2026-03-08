@@ -102,7 +102,7 @@ export function VillaContent() {
             >
               <Image
                 src="/images/villa_lily_blue-sxm_photo-living-room-04.jpeg"
-                alt="Intérieur Villa Lily Blue"
+                alt={t("imageAlts.interior")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -170,7 +170,7 @@ export function VillaContent() {
             >
               <Image
                 src="/images/villa_lily_blue-sxm_photo-master-view-hero.jpg"
-                alt="Salon Villa Lily Blue"
+                alt={t("imageAlts.livingRoom")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -83,6 +83,10 @@
     "living": {
       "title": "Living Spaces",
       "description": "A large living room opening onto the terrace, a dining area for 8 people, and a fully equipped American kitchen."
+    },
+    "imageAlts": {
+      "interior": "Villa Lily Blue interior",
+      "livingRoom": "Villa Lily Blue living room"
     }
   },
   "amenities": {
@@ -356,6 +360,15 @@
     "access": {
       "title": "How to Get There",
       "description": "Anse Marcel is accessible by a winding road from the main road. The bay is also accessible by boat. Princess Juliana Airport (SXM) is 25 minutes by car."
+    },
+    "cta": {
+      "title": "Stay in Anse Marcel",
+      "description": "Villa Lily Blue welcomes you on the heights of Anse Marcel with a stunning view of the bay.",
+      "discoverVilla": "Discover the villa",
+      "book": "Book now"
+    },
+    "imageAlts": {
+      "bay": "Anse Marcel bay view"
     }
   },
   "services": {
@@ -526,6 +539,15 @@
       "weather": "Climate: Tropical, 80°F year-round",
       "airport": "Airport: Princess Juliana (SXM)",
       "driving": "Driving: On the right on both sides"
+    },
+    "cta": {
+      "title": "Your Stay in Saint Martin",
+      "description": "Villa Lily Blue is ideally located to discover all the treasures of the island.",
+      "discoverVilla": "Discover the villa",
+      "learnMoreAnseMarcel": "Learn more about Anse Marcel"
+    },
+    "imageAlts": {
+      "bay": "Anse Marcel Bay"
     }
   }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { SaintMartinContent } from "./SaintMartinContent";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: t("metaKeywords"),
     alternates: {
       canonical: `/${locale}/saint-martin`,
-      languages: { fr: "/fr/saint-martin", en: "/en/saint-martin", es: "/es/saint-martin" },
+      languages: { fr: "/fr/saint-martin", en: "/en/saint-martin", es: "/es/saint-martin", "x-default": "/fr/saint-martin" },
     },
     openGraph: {
       title: `${t("title")} | Villa Lily Blue`,
@@ -28,5 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function SaintMartinPage() {
-  return <SaintMartinContent />;
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: "Saint Martin", path: "/saint-martin" }]} />
+      <SaintMartinContent />
+    </>
+  );
 }

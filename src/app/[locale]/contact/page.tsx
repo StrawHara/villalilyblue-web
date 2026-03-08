@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ContactContent } from "./ContactContent";
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/JsonLd";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: t("metaKeywords"),
     alternates: {
       canonical: `/${locale}/contact`,
-      languages: { fr: "/fr/contact", en: "/en/contact", es: "/es/contact" },
+      languages: { fr: "/fr/contact", en: "/en/contact", es: "/es/contact", "x-default": "/fr/contact" },
     },
     openGraph: {
       title: `${t("title")} | Villa Lily Blue`,
@@ -28,5 +29,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function ContactPage() {
-  return <ContactContent />;
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: "Contact", path: "/contact" }]} />
+      <FaqJsonLd />
+      <ContactContent />
+    </>
+  );
 }

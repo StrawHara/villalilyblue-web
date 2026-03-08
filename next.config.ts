@@ -53,7 +53,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/rooms",
-        destination: "/villa",
+        destination: "/fr/villa",
         permanent: true,
       },
       {

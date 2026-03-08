@@ -1,9 +1,10 @@
 import { useLocale, useTranslations } from "next-intl";
 
+const BASE_URL = "https://villalilyblue.com";
+
 export function JsonLd() {
   const locale = useLocale();
   const t = useTranslations("reviews");
-  const tContact = useTranslations("contact");
 
   const description =
     locale === "fr"
@@ -15,10 +16,15 @@ export function JsonLd() {
   const lodgingBusiness = {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+    "@id": `${BASE_URL}/#lodging`,
     name: "Villa Lily Blue",
     description,
-    url: "https://villalilyblue.com",
+    url: BASE_URL,
     email: "contact@villalilyblue.com",
+    sameAs: [
+      "https://www.airbnb.com/rooms/1164079937498977994",
+      "https://www.instagram.com/villalilyblue/",
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Anse Marcel",
@@ -32,10 +38,10 @@ export function JsonLd() {
       longitude: -63.0319,
     },
     image: [
-      "https://villalilyblue.com/images/og-image.jpg",
-      "https://villalilyblue.com/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg",
-      "https://villalilyblue.com/images/villa_lily_blue-sxm_photo-swimming-pool-and-house-01.jpeg",
-      "https://villalilyblue.com/images/villa_lily_blue-sxm_photo-master-view-hero.jpg",
+      `${BASE_URL}/images/og-image.jpg`,
+      `${BASE_URL}/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg`,
+      `${BASE_URL}/images/villa_lily_blue-sxm_photo-swimming-pool-and-house-01.jpeg`,
+      `${BASE_URL}/images/villa_lily_blue-sxm_photo-master-view-hero.jpg`,
     ],
     priceRange: "$$$",
     amenityFeature: [
@@ -55,53 +61,85 @@ export function JsonLd() {
       "@type": "AggregateRating",
       ratingValue: "5.0",
       bestRating: "5",
+      worstRating: "1",
       reviewCount: "15",
     },
     review: [
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Marie-Claire" },
-        datePublished: "2024-12",
+        datePublished: "2024-12-01",
         reviewRating: { "@type": "Rating", ratingValue: "5" },
         reviewBody: t("review1"),
       },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Thomas" },
-        datePublished: "2024-11",
+        datePublished: "2024-11-01",
         reviewRating: { "@type": "Rating", ratingValue: "5" },
         reviewBody: t("review2"),
       },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Sophie & Laurent" },
-        datePublished: "2024-10",
+        datePublished: "2024-10-01",
         reviewRating: { "@type": "Rating", ratingValue: "5" },
         reviewBody: t("review3"),
       },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Jean-Pierre" },
-        datePublished: "2024-09",
+        datePublished: "2024-09-01",
         reviewRating: { "@type": "Rating", ratingValue: "5" },
         reviewBody: t("review4"),
       },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Caroline" },
-        datePublished: "2024-08",
+        datePublished: "2024-08-01",
         reviewRating: { "@type": "Rating", ratingValue: "5" },
         reviewBody: t("review5"),
       },
       {
         "@type": "Review",
         author: { "@type": "Person", name: "Michel & Anne" },
-        datePublished: "2024-07",
+        datePublished: "2024-07-01",
         reviewRating: { "@type": "Rating", ratingValue: "5" },
         reviewBody: t("review6"),
       },
     ],
   };
+
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BASE_URL}/#website`,
+    name: "Villa Lily Blue",
+    url: BASE_URL,
+    inLanguage: ["fr", "en", "es"],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(lodgingBusiness) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+      />
+    </>
+  );
+}
+
+interface BreadcrumbItem {
+  name: string;
+  path?: string;
+}
+
+export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
+  const locale = useLocale();
 
   const breadcrumbList = {
     "@context": "https://schema.org",
@@ -111,10 +149,27 @@ export function JsonLd() {
         "@type": "ListItem",
         position: 1,
         name: "Villa Lily Blue",
-        item: `https://villalilyblue.com/${locale}`,
+        item: `${BASE_URL}/${locale}`,
       },
+      ...items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 2,
+        name: item.name,
+        ...(item.path ? { item: `${BASE_URL}/${locale}${item.path}` } : {}),
+      })),
     ],
   };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
+    />
+  );
+}
+
+export function FaqJsonLd() {
+  const tContact = useTranslations("contact");
 
   const faqItems = tContact.raw("faq.items") as Array<{ question: string; answer: string }>;
   const faqPage = {
@@ -131,19 +186,9 @@ export function JsonLd() {
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(lodgingBusiness) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbList) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }}
+    />
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { AnseMarcelContent } from "./AnseMarcelContent";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: t("metaKeywords"),
     alternates: {
       canonical: `/${locale}/anse-marcel`,
-      languages: { fr: "/fr/anse-marcel", en: "/en/anse-marcel", es: "/es/anse-marcel" },
+      languages: { fr: "/fr/anse-marcel", en: "/en/anse-marcel", es: "/es/anse-marcel", "x-default": "/fr/anse-marcel" },
     },
     openGraph: {
       title: `${t("title")} | Villa Lily Blue`,
@@ -28,5 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function AnseMarcelPage() {
-  return <AnseMarcelContent />;
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: "Anse Marcel", path: "/anse-marcel" }]} />
+      <AnseMarcelContent />
+    </>
+  );
 }

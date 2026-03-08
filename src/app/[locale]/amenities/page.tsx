@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { AmenitiesContent } from "./AmenitiesContent";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: t("metaKeywords"),
     alternates: {
       canonical: `/${locale}/amenities`,
-      languages: { fr: "/fr/amenities", en: "/en/amenities", es: "/es/amenities" },
+      languages: { fr: "/fr/amenities", en: "/en/amenities", es: "/es/amenities", "x-default": "/fr/amenities" },
     },
     openGraph: {
       title: `${t("title")} | Villa Lily Blue`,
@@ -28,5 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function AmenitiesPage() {
-  return <AmenitiesContent />;
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: "Amenities", path: "/amenities" }]} />
+      <AmenitiesContent />
+    </>
+  );
 }

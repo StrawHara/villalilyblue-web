@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { GalleryContent } from "./GalleryContent";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: t("metaKeywords"),
     alternates: {
       canonical: `/${locale}/gallery`,
-      languages: { fr: "/fr/gallery", en: "/en/gallery", es: "/es/gallery" },
+      languages: { fr: "/fr/gallery", en: "/en/gallery", es: "/es/gallery", "x-default": "/fr/gallery" },
     },
     openGraph: {
       title: `${t("title")} | Villa Lily Blue`,
@@ -28,5 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function GalleryPage() {
-  return <GalleryContent />;
+  return (
+    <>
+      <BreadcrumbJsonLd items={[{ name: "Gallery", path: "/gallery" }]} />
+      <GalleryContent />
+    </>
+  );
 }
