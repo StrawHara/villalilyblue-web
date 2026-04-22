@@ -88,11 +88,12 @@ export function AmenitiesContent() {
       <section className="bg-gray-50 py-24">
         <Container>
           <h2 className="sr-only">{t("title")}</h2>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {([
               { src: "/images/villa_lily_blue-sxm_photo-kitchen.jpg", altKey: "kitchen" },
               { src: "/images/villa_lily_blue-sxm_photo-fitness-room.jpeg", altKey: "fitness" },
               { src: "/images/villa_lily_blue-sxm_photo-bathroom-01.jpg", altKey: "bathroom" },
+              { src: "/images/villa_lily_blue-sxm_photo-bathrobes.jpeg", altKey: "bathrobes" },
             ] as const).map((img, i) => (
               <motion.div
                 key={img.altKey}
@@ -107,7 +108,7 @@ export function AmenitiesContent() {
                   alt={t(`imageAlts.${img.altKey}`)}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </motion.div>
             ))}
