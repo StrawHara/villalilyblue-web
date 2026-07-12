@@ -1,0 +1,81 @@
+name: ci-cd
+run-name: ${{ (github.event_name == 'pull_request' && 'CI') || 'CI + Deploy' }} — ${{ github.sha }}
+
+# Même méthode que perrotvi.fr / blendi (runbook-cicd-ns3365007) : tout sur runners GitHub-hosted.
+#   • quality : build + typecheck + lint — sur PR et push main. Pas de DB ici → pas de migrate.
+#   • deploy  : SSH sur le serveur (appleboy/ssh-action) → git reset --hard + build image
+#               + swap du conteneur app-prod + health-check. Aucun runner self-hosté.
+# Le serveur récupère le code via une DEPLOY KEY (lecture) du repo ; la connexion SSH utilise
+# le secret DEPLOY_SSH_KEY. Le déploiement ne tourne que si la variable DEPLOY_ENABLED == 'true'.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["**.md", "docs/**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-cd-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  quality:
+    name: Quality gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm run typecheck
+      - run: npm run lint
+
+  deploy:
+    name: Deploy (SSH)
+    needs: quality
+    if: github.event_name != 'pull_request' && vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    concurrency:
+      group: prod-deploy
+      cancel-in-progress: false
+    steps:
+      - name: SSH deploy
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -e
+            cd "${{ vars.DEPLOY_PATH || '$HOME/srv/villalilyblue-web' }}"
+            git fetch origin main
+            git checkout main
+            git reset --hard origin/main
+            COMPOSE="docker compose --profile production"
+            # 1) Build de la nouvelle image pendant que l'ancienne tourne encore.
+            $COMPOSE build app-prod
+            # 2) Swap du conteneur seul (pas de down préalable → interruption minimale).
+            $COMPOSE up -d --no-deps app-prod
+            docker image prune -f
+            # 3) Health-check : /fr renvoie 200 à curl (vérifié — pas de garde anti-bot).
+            for i in $(seq 1 20); do
+              if curl -fsS "http://127.0.0.1:8166/fr" >/dev/null; then echo "✓ santé OK"; exit 0; fi
+              echo "… attente ($i/20)"; sleep 3
+            done
+            echo "✗ health-check échoué"
+            $COMPOSE logs --tail=80 app-prod
+            exit 1

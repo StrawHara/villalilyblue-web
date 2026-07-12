@@ -70,7 +70,7 @@ NEXT_PUBLIC_GA_ID=G-LE74ZXQJ68
 ## SEO & Structured Data
 
 - **JSON-LD schemas**: LodgingBusiness, AggregateRating (5.0/5, 15 reviews), 6 individual Reviews, FAQPage (contact page), BreadcrumbList (all pages), WebSite
-- **LLM discoverability**: `public/llms.txt` + `public/.well-known/ai-plugin.json`
+- **LLM discoverability**: `public/llms.txt`
 - **Redirects**: `/rooms` → `/fr/villa` (301), `/:locale/rooms` → `/:locale/villa` (301)
 - **Security headers**: HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy
 - **Cache busting**: `generateBuildId` (unique per build) + `Cache-Control: max-age=0, must-revalidate` on HTML, `immutable` on `/_next/static/`
@@ -80,11 +80,26 @@ NEXT_PUBLIC_GA_ID=G-LE74ZXQJ68
 ```bash
 npm run dev          # Dev server
 npm run build        # Production build
-./deploy.sh          # Deploy to VPS (Docker)
+npm run typecheck    # tsc --noEmit
+npm run lint         # ESLint (flat config via FlatCompat)
+./deploy.sh          # Manual deploy to VPS (Docker) — superseded by CI/CD
 node scripts/generate-og-image.mjs       # Regenerate OG image
+node scripts/generate-icons.mjs          # Regenerate favicon/icons/manifest icons from logo
+node scripts/compress-images.mjs         # Compress listed images (idempotent, manifest-tracked)
 node scripts/generate-ads-report.mjs     # Google Ads PDF report
 node scripts/generate-site-report.mjs    # Site features PDF report
 ```
+
+## CI/CD
+
+`.github/workflows/ci-cd.yml` — same "build-on-server SSH" pattern as perrotvi.fr/blendi
+(see `~/Developer/runbook-cicd-ns3365007.md`):
+- **quality** (PR + push main): `npm ci` → `build` → `typecheck` → `lint`, all blocking.
+- **deploy** (push main only, gated by repo variable `DEPLOY_ENABLED == 'true'`): SSH to the VPS
+  (`secrets.DEPLOY_HOST/DEPLOY_USER/DEPLOY_SSH_KEY`), `git reset --hard origin/main`,
+  `docker compose --profile production build app-prod` then `up -d --no-deps app-prod`
+  (no `down` → minimal interruption), health-check on `http://127.0.0.1:8166/fr`.
+- Server-side repo path: repo variable `DEPLOY_PATH` (default `$HOME/srv/villalilyblue-web`).
 
 ## Known Issues / TODO
 
