@@ -292,6 +292,30 @@
         {
           "question": "¿Cómo funciona la llegada?",
           "answer": "Organizamos una bienvenida personalizada. Nuestro concierge le esperará en la villa para entregarle las llaves y mostrarle las instalaciones."
+        },
+        {
+          "question": "¿Cuáles son los horarios de llegada y salida?",
+          "answer": "La llegada es a partir de las 16:00 y la salida antes de las 11:00. Contáctenos si tiene limitaciones particulares y haremos lo posible."
+        },
+        {
+          "question": "¿Cómo obtener una tarifa y reservar?",
+          "answer": "Las tarifas varían según la temporada y la duración de la estancia. Contáctenos a través del formulario o por correo electrónico para recibir un presupuesto personalizado — respondemos en 24 horas."
+        },
+        {
+          "question": "¿La piscina es climatizada?",
+          "answer": "Sí, la villa cuenta con una piscina privada climatizada de 10 × 5 m, con tumbonas, sombrillas y ducha exterior."
+        },
+        {
+          "question": "¿Hay wifi y aire acondicionado?",
+          "answer": "Sí, la villa dispone de wifi de alta velocidad por Starlink y habitaciones con aire acondicionado."
+        },
+        {
+          "question": "¿Es necesario alquilar un coche?",
+          "answer": "Es recomendable para disfrutar plenamente de la isla. La villa dispone de aparcamiento privado para hasta 6 vehículos, y nuestra conserjería puede organizar un coche de alquiler entregado directamente en la villa."
+        },
+        {
+          "question": "¿A qué distancia está el aeropuerto?",
+          "answer": "El aeropuerto internacional Princess Juliana (SXM) está a unos 25 minutos en coche. Nuestra conserjería ofrece un traslado VIP al aeropuerto bajo petición."
         }
       ]
     }

@@ -292,6 +292,30 @@
         {
           "question": "How does arrival work?",
           "answer": "We organize a personalized welcome. Our concierge will be waiting for you at the villa to hand over the keys and give you a tour."
+        },
+        {
+          "question": "What are the check-in and check-out times?",
+          "answer": "Check-in is from 4:00 PM and check-out is by 11:00 AM. Contact us if you have specific constraints and we will do our best."
+        },
+        {
+          "question": "How do I get a rate and book?",
+          "answer": "Rates vary by season and length of stay. Contact us through the form or by email for a personalized quote — we reply within 24 hours."
+        },
+        {
+          "question": "Is the pool heated?",
+          "answer": "Yes, the villa has a private heated 10 × 5 m pool, with sun loungers, parasols and an outdoor shower."
+        },
+        {
+          "question": "Is there WiFi and air conditioning?",
+          "answer": "Yes, the villa has high-speed Starlink WiFi and air-conditioned bedrooms."
+        },
+        {
+          "question": "Do I need to rent a car?",
+          "answer": "It is recommended to make the most of the island. The villa has private parking for up to 6 vehicles, and our concierge can arrange a rental car delivered directly to the villa."
+        },
+        {
+          "question": "How far is the airport?",
+          "answer": "Princess Juliana International Airport (SXM) is about a 25-minute drive away. Our concierge offers a VIP airport transfer on request."
         }
       ]
     }

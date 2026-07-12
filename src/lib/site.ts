@@ -9,6 +9,12 @@ export const BRAND_COLOR = "#3AA6B9";
 export const AIRBNB_URL = "https://www.airbnb.fr/rooms/1313868121596013747";
 export const INSTAGRAM_URL = "https://www.instagram.com/villalilyblue/";
 
+// Autres annonces officielles de la villa — consolident l'entité (sameAs JSON-LD)
+export const BOOKING_URL =
+  "https://www.booking.com/hotel/mf/villa-lily-blue-spacious-and-elegant-sea-view-4-bedrooms.fr.html";
+export const ABRITEL_URL = "https://www.abritel.fr/location-vacances/p2499717";
+export const FORTYWEEKS_URL = "https://rentals.40weeks.fr/listings/348616";
+
 export const OG_IMAGE = {
   url: "/images/og-image.jpg",
   width: 1200,

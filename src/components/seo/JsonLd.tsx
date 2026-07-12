@@ -1,6 +1,14 @@
 import { useLocale, useTranslations } from "next-intl";
 
-import { AIRBNB_URL, CONTACT_EMAIL, INSTAGRAM_URL, SITE_URL } from "@/lib/site";
+import {
+  ABRITEL_URL,
+  AIRBNB_URL,
+  BOOKING_URL,
+  CONTACT_EMAIL,
+  FORTYWEEKS_URL,
+  INSTAGRAM_URL,
+  SITE_URL,
+} from "@/lib/site";
 
 export function JsonLd() {
   const locale = useLocale();
@@ -22,7 +30,7 @@ export function JsonLd() {
     url: SITE_URL,
     knowsLanguage: ["fr", "en", "es"],
     email: CONTACT_EMAIL,
-    sameAs: [AIRBNB_URL, INSTAGRAM_URL],
+    sameAs: [AIRBNB_URL, BOOKING_URL, ABRITEL_URL, FORTYWEEKS_URL, INSTAGRAM_URL],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Anse Marcel",
