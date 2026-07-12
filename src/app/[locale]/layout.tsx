@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -6,12 +6,17 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header, Footer, FloatingCTA } from "@/components/layout";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { BRAND_COLOR, OG_IMAGE, OG_LOCALES, SITE_NAME, SITE_URL } from "@/lib/site";
 import "../globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
 });
+
+export const viewport: Viewport = {
+  themeColor: BRAND_COLOR,
+};
 
 type Locale = (typeof routing.locales)[number];
 
@@ -31,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: t("description"),
     keywords: t("keywords"),
-    metadataBase: new URL("https://villalilyblue.com"),
+    metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -44,24 +49,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: `https://villalilyblue.com/${locale}`,
-      siteName: "Villa Lily Blue",
-      locale: locale === "fr" ? "fr_FR" : locale === "es" ? "es_ES" : "en_US",
+      url: `${SITE_URL}/${locale}`,
+      siteName: SITE_NAME,
+      locale: OG_LOCALES[locale] ?? "en_US",
       type: "website",
-      images: [
-        {
-          url: "/images/og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: "Villa Lily Blue - Anse Marcel, Saint Martin",
-        },
-      ],
+      images: [OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/images/og-image.jpg"],
+      images: [OG_IMAGE.url],
     },
     robots: {
       index: true,

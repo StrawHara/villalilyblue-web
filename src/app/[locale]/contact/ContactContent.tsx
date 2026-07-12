@@ -22,7 +22,7 @@ export function ContactContent() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/villa_lily_blue-sxm_photo-master-view-hero-02.jpeg"
-            alt="Contact Villa Lily Blue"
+            alt={t("imageAlts.hero")}
             fill
             priority
             quality={75}
@@ -73,7 +73,7 @@ export function ContactContent() {
             >
               <Card>
                 <CardTitle className="mb-6">{t("info.title")}</CardTitle>
-                <div className="space-y-4">
+                <address className="not-italic space-y-4">
                   <a
                     href={`mailto:${t("info.email")}`}
                     className="flex items-center gap-3 text-gray-600 transition-colors hover:text-[var(--primary)]"
@@ -90,7 +90,7 @@ export function ContactContent() {
                     </div>
                     {t("info.response")}
                   </div>
-                </div>
+                </address>
               </Card>
 
               {/* Map Preview */}

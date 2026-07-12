@@ -5,9 +5,12 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  poweredByHeader: false,
   generateBuildId: () => `build-${Date.now()}`,
   images: {
     formats: ["image/avif", "image/webp"],
+    // 31 jours : les photos de la villa ne changent jamais sans changer d'URL
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       {
         protocol: "https",
@@ -44,6 +47,26 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Sans cette règle, le Cache-Control max-age=0 du catch-all s'applique
+        // aussi aux images optimisées, qui ne sont alors jamais mises en cache
+        source: "/_next/image(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2678400, must-revalidate",
+          },
+        ],
+      },
+      {
+        source: "/icons/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2678400, must-revalidate",
           },
         ],
       },

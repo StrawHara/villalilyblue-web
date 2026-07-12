@@ -38,7 +38,7 @@ export function LocationContent() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/villa_lily_blue-sxm_photo-anse-marcel-beach.jpg"
-            alt="Anse Marcel, Saint Martin"
+            alt={t("imageAlts.hero")}
             fill
             priority
             quality={75}
@@ -89,7 +89,7 @@ export function LocationContent() {
             >
               <Image
                 src="/images/villa_lily_blue-sxm_photo-anse-marcel-beach-03.webp"
-                alt="Baie d'Anse Marcel"
+                alt={t("imageAlts.bay")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -145,7 +145,7 @@ export function LocationContent() {
             >
               <Image
                 src="/images/villa_lily_blue-sxm_photo-anse-marcel-beach-aerial.webp"
-                alt="Plage d'Anse Marcel - vue aérienne"
+                alt={t("imageAlts.beachAerial")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -160,7 +160,7 @@ export function LocationContent() {
             >
               <Image
                 src="/images/villa_lily_blue-sxm_photo-anse-marcel-bay-aerial.webp"
-                alt="Baie d'Anse Marcel - vue aérienne"
+                alt={t("imageAlts.bayAerial")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

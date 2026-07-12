@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { SaintMartinContent } from "./SaintMartinContent";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { buildPageMetadata } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -11,27 +13,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "saintMartin" });
 
-  return {
-    title: t("title"),
-    description: t("metaDescription"),
-    keywords: t("metaKeywords"),
-    alternates: {
-      canonical: `/${locale}/saint-martin`,
-      languages: { fr: "/fr/saint-martin", en: "/en/saint-martin", es: "/es/saint-martin", "x-default": "/fr/saint-martin" },
-    },
-    openGraph: {
-      title: `${t("title")} | Villa Lily Blue`,
-      description: t("metaDescription"),
-      url: `https://villalilyblue.com/${locale}/saint-martin`,
-      images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Villa Lily Blue - Anse Marcel, Saint Martin" }],
-    },
-  };
+  return buildPageMetadata({ locale, path: "/saint-martin", title: t("title"), description: t("metaDescription"), keywords: t("metaKeywords") });
 }
 
 export default function SaintMartinPage() {
+  const t = useTranslations("saintMartin");
+
   return (
     <>
-      <BreadcrumbJsonLd items={[{ name: "Saint Martin", path: "/saint-martin" }]} />
+      <BreadcrumbJsonLd items={[{ name: t("title"), path: "/saint-martin" }]} />
       <SaintMartinContent />
     </>
   );

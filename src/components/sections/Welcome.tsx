@@ -25,7 +25,7 @@ export function Welcome() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src="/images/villa_lily_blue-sxm_photo-living-room-01.jpg"
-                alt="Villa Lily Blue - Salon"
+                alt={t("welcomeImageAlt")}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

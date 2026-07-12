@@ -6,6 +6,7 @@ import { Container } from "@/components/ui";
 import { Mail, MapPin, Instagram } from "lucide-react";
 import Image from "next/image";
 import { trackEvent } from "@/lib/analytics";
+import { AIRBNB_URL, INSTAGRAM_URL } from "@/lib/site";
 
 const menuLinks = [
   { href: "/villa", label: "villa" },
@@ -82,7 +83,7 @@ export function Footer() {
           {/* Contact */}
           <div className="lg:col-span-2">
             <h4 className="mb-4 text-lg font-semibold">{t("contact")}</h4>
-            <div className="flex flex-col gap-3">
+            <address className="not-italic flex flex-col gap-3">
               <a
                 href={`mailto:${tContact("email")}`}
                 className="flex items-center gap-2 text-gray-300 transition-colors hover:text-[var(--primary)]"
@@ -95,7 +96,7 @@ export function Footer() {
                 <MapPin className="h-4 w-4" />
                 Anse Marcel, Saint Martin
               </div>
-            </div>
+            </address>
           </div>
 
           {/* Social & Airbnb */}
@@ -103,7 +104,7 @@ export function Footer() {
             <h4 className="mb-4 text-lg font-semibold">{t("followUs")}</h4>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/villalilyblue/"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -113,7 +114,7 @@ export function Footer() {
               </a>
             </div>
             <a
-              href="https://www.airbnb.fr/rooms/1313868121596013747"
+              href={AIRBNB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-[var(--primary)]"
@@ -128,7 +129,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
           <p className="text-sm text-gray-400">
-            {t("copyright", { year: currentYear })} Design by{" "}
+            {t("copyright", { year: currentYear })} {t("designBy")}{" "}
             <a
               href="https://straw-tech.io"
               target="_blank"

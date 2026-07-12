@@ -100,7 +100,7 @@ export function LuxuryLandingContent() {
           >
             <Image
               src="/images/villa_lily_blue-sxm_photo-master-view-hero.jpg"
-              alt="Villa Lily Blue - Luxe"
+              alt={t("imageAlts.hero")}
               fill
               priority
               className="object-cover"
@@ -156,7 +156,7 @@ export function LuxuryLandingContent() {
               >
                 <Image
                   src={`/images/villa_lily_blue-sxm_photo-${i === 1 ? "kitchen" : i === 2 ? "bathroom-01" : "outdoor-kitchen"}.${i === 3 ? "jpeg" : "jpg"}`}
-                  alt={`Villa Lily Blue Luxe ${i}`}
+                  alt={t(`imageAlts.gallery${i}`)}
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -216,7 +216,7 @@ export function LuxuryLandingContent() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
-              Réservez votre séjour d'exception
+              Réservez votre séjour d&apos;exception
             </h2>
             <Link href="/contact">
               <Button size="lg" variant="gold" className="text-lg">

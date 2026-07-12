@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { Hero, Highlights, Welcome, GalleryPreview, CallToAction } from "@/components/sections";
 import { Reviews } from "@/components/sections/Reviews";
 import { JsonLd, BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { buildPageMetadata } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -13,26 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "home" });
   const meta = await getTranslations({ locale, namespace: "metadata" });
 
-  return {
-    title: meta("title"),
-    description: t("metaDescription"),
-    keywords: t("metaKeywords"),
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        fr: "/fr",
-        en: "/en",
-        es: "/es",
-        "x-default": "/fr",
-      },
-    },
-    openGraph: {
-      title: meta("title"),
-      description: t("metaDescription"),
-      url: `https://villalilyblue.com/${locale}`,
-      images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Villa Lily Blue - Anse Marcel, Saint Martin" }],
-    },
-  };
+  return buildPageMetadata({ locale, path: "", title: meta("title"), description: t("metaDescription"), keywords: t("metaKeywords"), titleAbsolute: true });
 }
 
 export default function HomePage() {

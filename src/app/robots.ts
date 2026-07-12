@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { routing } from "@/i18n/routing";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/lp/"],
+        disallow: ["/api/", "/lp/", ...routing.locales.map((locale) => `/${locale}/lp/`)],
       },
     ],
     sitemap: "https://villalilyblue.com/sitemap.xml",

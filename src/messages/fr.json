@@ -18,13 +18,15 @@
     "subtitle": "Spacieuse & Élégante, Vue Mer Époustouflante",
     "badge": "Rénovée en 2024",
     "location": "Anse Marcel, Saint Martin",
-    "cta": "Réserver mon séjour"
+    "cta": "Réserver mon séjour",
+    "imageAlt": "Villa Lily Blue – Vue panoramique sur la mer des Caraïbes"
   },
   "home": {
     "metaDescription": "Villa Lily Blue : villa de luxe avec vue mer panoramique à Anse Marcel, Saint Martin. Piscine privée chauffée, 4 chambres, conciergerie. Réservez votre séjour de rêve.",
     "metaKeywords": "villa luxe saint martin, location villa anse marcel, villa piscine privée caraïbes, vacances saint martin, villa vue mer antilles",
     "welcomeTitle": "Bienvenue à Villa Lily Blue",
     "welcomeText": "Nichée sur les hauteurs d'Anse Marcel, Villa Lily Blue vous offre un havre de paix avec une vue panoramique exceptionnelle sur la mer des Caraïbes. Cette villa de standing allie confort moderne et charme tropical pour des vacances inoubliables.",
+    "welcomeImageAlt": "Villa Lily Blue – Salon avec vue mer",
     "highlights": {
       "title": "Pourquoi choisir Villa Lily Blue ?",
       "seaView": {
@@ -97,22 +99,54 @@
     "categories": {
       "pool": {
         "title": "Piscine & Extérieur",
-        "items": ["Piscine chauffée privée 10x5m", "Cuisine extérieure & barbecue", "Transats et parasols", "Douche extérieure", "Jardin tropical", "Parking privé (jusqu'à 6 véhicules)"]
+        "items": [
+          "Piscine chauffée privée 10x5m",
+          "Cuisine extérieure & barbecue",
+          "Transats et parasols",
+          "Douche extérieure",
+          "Jardin tropical",
+          "Parking privé (jusqu'à 6 véhicules)"
+        ]
       },
       "kitchen": {
         "title": "Cuisine",
-        "items": ["Cuisine américaine équipée", "Réfrigérateur américain", "Four et micro-ondes", "Lave-vaisselle", "Machine à café Nespresso", "Blender et équipements"]
+        "items": [
+          "Cuisine américaine équipée",
+          "Réfrigérateur américain",
+          "Four et micro-ondes",
+          "Lave-vaisselle",
+          "Machine à café Nespresso",
+          "Blender et équipements"
+        ]
       },
       "comfort": {
         "title": "Confort",
-        "items": ["Climatisation dans toutes les pièces", "WiFi Starlink haut débit", "TV écran plat", "Sonorisation Sonos intérieur/extérieur", "Cave à vins", "Salle de fitness", "Coffre-fort", "Balance dans salle de bain", "Draps, serviettes et peignoirs"]
+        "items": [
+          "Climatisation dans toutes les pièces",
+          "WiFi Starlink haut débit",
+          "TV écran plat",
+          "Sonorisation Sonos intérieur/extérieur",
+          "Cave à vins",
+          "Salle de fitness",
+          "Coffre-fort",
+          "Balance dans salle de bain",
+          "Draps, serviettes et peignoirs"
+        ]
       },
       "services": {
         "title": "Services Inclus",
-        "items": ["Ménage de fin de séjour", "Draps et serviettes", "Serviettes de plage", "Accueil personnalisé", "Conciergerie disponible", "Guide local fourni"]
+        "items": [
+          "Ménage de fin de séjour",
+          "Draps et serviettes",
+          "Serviettes de plage",
+          "Accueil personnalisé",
+          "Conciergerie disponible",
+          "Guide local fourni"
+        ]
       }
     },
     "imageAlts": {
+      "hero": "Équipements de la Villa Lily Blue",
       "kitchen": "Cuisine moderne entièrement équipée de Villa Lily Blue",
       "fitness": "Salle de fitness privée de Villa Lily Blue",
       "bathroom": "Salle de bain élégante de Villa Lily Blue",
@@ -172,6 +206,12 @@
     "title": "Localisation",
     "subtitle": "Au cœur d'Anse Marcel",
     "description": "Villa Lily Blue bénéficie d'un emplacement exceptionnel sur les hauteurs d'Anse Marcel, l'une des plus belles baies de Saint Martin. Profitez du calme absolu tout en étant à proximité de tout.",
+    "imageAlts": {
+      "hero": "Anse Marcel, Saint Martin",
+      "bay": "Baie d'Anse Marcel",
+      "beachAerial": "Plage d'Anse Marcel – vue aérienne",
+      "bayAerial": "Baie d'Anse Marcel – vue aérienne"
+    },
     "distances": {
       "title": "À proximité",
       "beach": "Plage d'Anse Marcel : 5 min",
@@ -211,6 +251,9 @@
     "metaKeywords": "contact villa saint martin, réservation villa anse marcel, devis villa luxe caraïbes, réserver villa antilles",
     "title": "Contactez-nous",
     "subtitle": "Réservez votre séjour de rêve",
+    "imageAlts": {
+      "hero": "Contactez Villa Lily Blue"
+    },
     "form": {
       "firstName": "Prénom",
       "lastName": "Nom",
@@ -282,16 +325,39 @@
       "subtitle": "Villa Lily Blue vous attend",
       "badge": "Offre Exclusive",
       "cta": "Réserver maintenant",
-      "features": ["Vue mer panoramique", "Piscine privée", "4 chambres", "Conciergerie"],
-      "urgency": "Places limitées pour la saison"
+      "features": [
+        "Vue mer panoramique",
+        "Piscine privée",
+        "4 chambres",
+        "Conciergerie"
+      ],
+      "urgency": "Places limitées pour la saison",
+      "imageAlts": {
+        "hero": "Villa Lily Blue – Piscine vue du ciel",
+        "gallery1": "Suite parentale",
+        "gallery2": "Salon avec vue mer",
+        "gallery3": "Piscine chauffée",
+        "gallery4": "Plage d'Anse Marcel"
+      }
     },
     "luxury": {
       "title": "Le Luxe au Cœur des Caraïbes",
       "subtitle": "Une expérience inoubliable à Anse Marcel",
       "badge": "Villa Premium",
       "cta": "Découvrir la villa",
-      "features": ["250m² de standing", "Vue imprenable", "Équipements haut de gamme", "Emplacement privilégié"],
-      "testimonial": "\"Un séjour magique, une villa parfaite\" - Marie L."
+      "features": [
+        "250m² de standing",
+        "Vue imprenable",
+        "Équipements haut de gamme",
+        "Emplacement privilégié"
+      ],
+      "testimonial": "\"Un séjour magique, une villa parfaite\" - Marie L.",
+      "imageAlts": {
+        "hero": "Villa Lily Blue – Villa de luxe vue mer",
+        "gallery1": "Cuisine moderne",
+        "gallery2": "Salle de bain",
+        "gallery3": "Cuisine extérieure avec barbecue"
+      }
     }
   },
   "footer": {
@@ -302,7 +368,8 @@
     "followUs": "Suivez-nous",
     "legal": "Mentions légales",
     "privacy": "Confidentialité",
-    "copyright": "© {year} All rights Reserved."
+    "copyright": "© {year} Tous droits réservés.",
+    "designBy": "Site conçu par"
   },
   "common": {
     "learnMore": "En savoir plus",
@@ -377,6 +444,9 @@
     "subtitle": "Un séjour sur-mesure",
     "metaDescription": "Découvrez nos services de conciergerie à Villa Lily Blue : ménage, chef à domicile, garde d'enfants, transferts, excursions et bien plus.",
     "metaKeywords": "conciergerie villa saint martin, chef privé villa, services luxe caraïbes, transfert aéroport saint martin, excursions saint martin",
+    "imageAlts": {
+      "hero": "Services de conciergerie – Villa Lily Blue"
+    },
     "intro": {
       "title": "Une conciergerie à votre service",
       "description": "Pour rendre votre séjour inoubliable, nous proposons une gamme complète de services personnalisés. Notre équipe locale se charge de tout organiser pour vous, avant et pendant votre séjour."

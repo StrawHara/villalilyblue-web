@@ -8,17 +8,18 @@ import Image from "next/image";
 import { trackEvent } from "@/lib/analytics";
 
 const previewImages = [
-  { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg", alt: "Vue extérieure" },
-  { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-01.jpeg", alt: "Piscine" },
-  { src: "/images/villa_lily_blue-sxm_photo-master-bedroom.jpg", alt: "Chambre" },
-  { src: "/images/villa_lily_blue-sxm_photo-master-view-hero-01.jpeg", alt: "Vue mer" },
-  { src: "/images/villa_lily_blue-sxm_photo-living-room-01.jpg", alt: "Salon" },
-  { src: "/images/villa_lily_blue-sxm_photo-outdoor-kitchen.jpeg", alt: "Terrasse" },
+  { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg", altKey: "aerialView" },
+  { src: "/images/villa_lily_blue-sxm_photo-swimming-pool-01.jpeg", altKey: "pool" },
+  { src: "/images/villa_lily_blue-sxm_photo-master-bedroom.jpg", altKey: "masterSuite" },
+  { src: "/images/villa_lily_blue-sxm_photo-master-view-hero-01.jpeg", altKey: "oceanView" },
+  { src: "/images/villa_lily_blue-sxm_photo-living-room-01.jpg", altKey: "lounge" },
+  { src: "/images/villa_lily_blue-sxm_photo-outdoor-kitchen.jpeg", altKey: "outdoorKitchen" },
 ];
 
 export function GalleryPreview() {
   const t = useTranslations("home");
   const tCommon = useTranslations("common");
+  const tGallery = useTranslations("gallery");
 
   return (
     <section className="py-24">
@@ -47,7 +48,7 @@ export function GalleryPreview() {
             >
               <Image
                 src={image.src}
-                alt={image.alt}
+                alt={tGallery(`alt.${image.altKey}`)}
                 fill
                 quality={75}
                 placeholder="blur"

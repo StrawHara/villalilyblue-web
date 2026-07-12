@@ -18,7 +18,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/villa_lily_blue-sxm_photo-master-view-hero.jpg"
-          alt="Villa Lily Blue - Vue panoramique"
+          alt={t("imageAlt")}
           fill
           priority
           quality={75}

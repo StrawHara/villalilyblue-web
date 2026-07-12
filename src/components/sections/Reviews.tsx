@@ -1,10 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Container } from "@/components/ui";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { AIRBNB_URL } from "@/lib/site";
 
 const reviews = [
   {
@@ -75,7 +76,9 @@ function StarRating({ rating }: { rating: number }) {
 function formatDate(dateStr: string, locale: string) {
   const [year, month] = dateStr.split("-");
   const date = new Date(parseInt(year), parseInt(month) - 1);
-  return date.toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", {
+  const dateLocale =
+    locale === "fr" ? "fr-FR" : locale === "es" ? "es-ES" : "en-US";
+  return date.toLocaleDateString(dateLocale, {
     month: "long",
     year: "numeric",
   });
@@ -83,11 +86,11 @@ function formatDate(dateStr: string, locale: string) {
 
 interface ReviewsProps {
   showAll?: boolean;
-  locale?: string;
 }
 
-export function Reviews({ showAll = false, locale = "fr" }: ReviewsProps) {
+export function Reviews({ showAll = false }: ReviewsProps) {
   const t = useTranslations("reviews");
+  const locale = useLocale();
   const displayedReviews = showAll ? reviews : reviews.slice(0, 3);
 
   return (
@@ -123,7 +126,7 @@ export function Reviews({ showAll = false, locale = "fr" }: ReviewsProps) {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {displayedReviews.map((review, index) => (
-            <motion.div
+            <motion.article
               key={review.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -152,9 +155,11 @@ export function Reviews({ showAll = false, locale = "fr" }: ReviewsProps) {
               </p>
 
               <p className="mt-4 text-sm text-gray-400">
-                {formatDate(review.date, locale)}
+                <time dateTime={review.date}>
+                  {formatDate(review.date, locale)}
+                </time>
               </p>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 
@@ -166,7 +171,7 @@ export function Reviews({ showAll = false, locale = "fr" }: ReviewsProps) {
             className="mt-10 text-center"
           >
             <a
-              href="https://www.airbnb.fr/rooms/1313868121596013747"
+              href={AIRBNB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--primary)] px-6 py-3 font-medium text-[var(--primary)] transition-all hover:bg-[var(--primary)] hover:text-white"

@@ -39,7 +39,7 @@ export function VacationLandingContent() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg"
-            alt="Villa Lily Blue - Vacances de rêve"
+            alt={t("imageAlts.hero")}
             fill
             priority
             className="object-cover"
@@ -128,7 +128,7 @@ export function VacationLandingContent() {
                       />
                     ))}
                   </div>
-                  <p className="mb-4 text-gray-600 italic">"{testimonial.text}"</p>
+                  <p className="mb-4 text-gray-600 italic">&ldquo;{testimonial.text}&rdquo;</p>
                   <div>
                     <p className="font-semibold text-[var(--secondary)]">
                       {testimonial.name}
@@ -157,7 +157,7 @@ export function VacationLandingContent() {
               >
                 <Image
                   src={`/images/villa_lily_blue-sxm_photo-${i === 1 ? "master-bedroom" : i === 2 ? "living-room-01" : i === 3 ? "swimming-pool-01" : "anse-marcel-beach"}.${i === 3 ? "jpeg" : "jpg"}`}
-                  alt={`Villa Lily Blue ${i}`}
+                  alt={t(`imageAlts.gallery${i}`)}
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-110"
                   sizes="(max-width: 768px) 50vw, 25vw"

@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 
-const BASE_URL = "https://villalilyblue.com";
+import { AIRBNB_URL, CONTACT_EMAIL, INSTAGRAM_URL, SITE_URL } from "@/lib/site";
 
 export function JsonLd() {
   const locale = useLocale();
@@ -15,16 +15,14 @@ export function JsonLd() {
 
   const lodgingBusiness = {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "@id": `${BASE_URL}/#lodging`,
+    "@type": ["LodgingBusiness", "VacationRental"],
+    "@id": `${SITE_URL}/#lodging`,
     name: "Villa Lily Blue",
     description,
-    url: BASE_URL,
-    email: "contact@villalilyblue.com",
-    sameAs: [
-      "https://www.airbnb.com/rooms/1164079937498977994",
-      "https://www.instagram.com/villalilyblue/",
-    ],
+    url: SITE_URL,
+    knowsLanguage: ["fr", "en", "es"],
+    email: CONTACT_EMAIL,
+    sameAs: [AIRBNB_URL, INSTAGRAM_URL],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Anse Marcel",
@@ -38,10 +36,10 @@ export function JsonLd() {
       longitude: -63.0319,
     },
     image: [
-      `${BASE_URL}/images/og-image.jpg`,
-      `${BASE_URL}/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg`,
-      `${BASE_URL}/images/villa_lily_blue-sxm_photo-swimming-pool-and-house-01.jpeg`,
-      `${BASE_URL}/images/villa_lily_blue-sxm_photo-master-view-hero.jpg`,
+      `${SITE_URL}/images/og-image.jpg`,
+      `${SITE_URL}/images/villa_lily_blue-sxm_photo-swimming-pool-from-sky.jpeg`,
+      `${SITE_URL}/images/villa_lily_blue-sxm_photo-swimming-pool-and-house-01.jpeg`,
+      `${SITE_URL}/images/villa_lily_blue-sxm_photo-master-view-hero.jpg`,
     ],
     priceRange: "$$$",
     amenityFeature: [
@@ -57,6 +55,35 @@ export function JsonLd() {
     petsAllowed: false,
     checkinTime: "16:00",
     checkoutTime: "11:00",
+    // Requis par le type VacationRental (schema.org) : détail du logement
+    containsPlace: {
+      "@type": "Accommodation",
+      name: "Villa Lily Blue",
+      occupancy: {
+        "@type": "QuantitativeValue",
+        maxValue: 8,
+        unitCode: "C62",
+      },
+      numberOfBedrooms: 4,
+      numberOfBathroomsTotal: 5,
+      floorSize: {
+        "@type": "QuantitativeValue",
+        value: 250,
+        unitCode: "MTK",
+      },
+    },
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/${locale}/contact`,
+        actionPlatform: [
+          "https://schema.org/DesktopWebPlatform",
+          "https://schema.org/MobileWebPlatform",
+        ],
+      },
+      result: { "@type": "LodgingReservation", name: "Booking request" },
+    },
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
@@ -113,9 +140,9 @@ export function JsonLd() {
   const webSite = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": `${BASE_URL}/#website`,
+    "@id": `${SITE_URL}/#website`,
     name: "Villa Lily Blue",
-    url: BASE_URL,
+    url: SITE_URL,
     inLanguage: ["fr", "en", "es"],
   };
 
@@ -149,13 +176,13 @@ export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
         "@type": "ListItem",
         position: 1,
         name: "Villa Lily Blue",
-        item: `${BASE_URL}/${locale}`,
+        item: `${SITE_URL}/${locale}`,
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.name,
-        ...(item.path ? { item: `${BASE_URL}/${locale}${item.path}` } : {}),
+        ...(item.path ? { item: `${SITE_URL}/${locale}${item.path}` } : {}),
       })),
     ],
   };

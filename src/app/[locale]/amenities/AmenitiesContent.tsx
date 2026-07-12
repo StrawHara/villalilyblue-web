@@ -23,7 +23,7 @@ export function AmenitiesContent() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/villa_lily_blue-sxm_photo-swimming-pool-01.jpeg"
-            alt="Équipements Villa Lily Blue"
+            alt={t("imageAlts.hero")}
             fill
             priority
             quality={75}

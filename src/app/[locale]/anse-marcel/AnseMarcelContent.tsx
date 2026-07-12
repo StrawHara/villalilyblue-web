@@ -13,7 +13,7 @@ export function AnseMarcelContent() {
   const t = useTranslations("anseMarcel");
 
   return (
-    <>
+    <article>
       {/* Hero Section */}
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
@@ -229,6 +229,6 @@ export function AnseMarcelContent() {
           </motion.div>
         </Container>
       </section>
-    </>
+    </article>
   );
 }

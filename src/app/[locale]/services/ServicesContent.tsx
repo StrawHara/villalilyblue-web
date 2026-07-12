@@ -36,7 +36,7 @@ export function ServicesContent() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/villa_lily_blue-sxm_photo-living-room-01.jpg"
-            alt="Services de Conciergerie"
+            alt={t("imageAlts.hero")}
             fill
             priority
             quality={75}
