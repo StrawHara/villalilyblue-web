@@ -3,10 +3,9 @@ run-name: ${{ (github.event_name == 'pull_request' && 'CI') || 'CI + Deploy' }} 
 
 # Même méthode que perrotvi.fr / blendi (runbook-cicd-ns3365007) : tout sur runners GitHub-hosted.
 #   • quality : build + typecheck + lint — sur PR et push main. Pas de DB ici → pas de migrate.
-#   • deploy  : SSH sur le serveur (appleboy/ssh-action) → git reset --hard + build image
-#               + swap du conteneur app-prod + health-check. Aucun runner self-hosté.
-# Le serveur récupère le code via une DEPLOY KEY (lecture) du repo ; la connexion SSH utilise
-# le secret DEPLOY_SSH_KEY. Le déploiement ne tourne que si la variable DEPLOY_ENABLED == 'true'.
+#   • deploy  : image app-prod construite ici, envoyée au Hub, déployée par hub-deploy
+#               (swap d'app-prod + santé + retour arrière). Aucun build sur le serveur.
+# Le déploiement ne tourne que si la variable DEPLOY_ENABLED == 'true'.
 
 on:
   push:
@@ -43,39 +42,57 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
 
+  # Image construite ici et déployée sur le Hub par hub-deploy (décision hub-ci-images, 04/11/2026 ;
+  # modèle straw-infra/ci/deploy-image.yml). Le Hub vérifie le commit, redémarre app-prod seul,
+  # contrôle /fr et revient à la version précédente en cas d'échec.
+  # Secrets : HUB_DEPLOY_KEY, HUB_HOST, HUB_KNOWN_HOSTS.
   deploy:
-    name: Deploy (SSH)
+    name: Deploy (Hub)
     needs: quality
     if: github.event_name != 'pull_request' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     concurrency:
       group: prod-deploy
       cancel-in-progress: false
+    env:
+      SERVICE: villalilyblue-web
     steps:
-      - name: SSH deploy
-        uses: appleboy/ssh-action@v1
+      - uses: actions/checkout@v5
         with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
-          script: |
-            set -e
-            cd "${{ vars.DEPLOY_PATH || '$HOME/srv/villalilyblue-web' }}"
-            git fetch origin main
-            git checkout main
-            git reset --hard origin/main
-            COMPOSE="docker compose --profile production"
-            # 1) Build de la nouvelle image pendant que l'ancienne tourne encore.
-            $COMPOSE build app-prod
-            # 2) Swap du conteneur seul (pas de down préalable → interruption minimale).
-            $COMPOSE up -d --no-deps app-prod
-            docker image prune -f
-            # 3) Health-check : /fr renvoie 200 à curl (vérifié — pas de garde anti-bot).
-            for i in $(seq 1 20); do
-              if curl -fsS "http://127.0.0.1:8166/fr" >/dev/null; then echo "✓ santé OK"; exit 0; fi
-              echo "… attente ($i/20)"; sleep 3
-            done
-            echo "✗ health-check échoué"
-            $COMPOSE logs --tail=80 app-prod
-            exit 1
+          persist-credentials: false
+
+      - uses: docker/setup-buildx-action@v3
+
+      # NEXT_PUBLIC_GA_ID est inliné dans le bundle au build : valeur publique reprise du .env du
+      # Hub au 04/11/2026 (le build la lisait dans le .env copié par `COPY . .`, exclu désormais
+      # par .dockerignore). Sans elle, le site part sans Google Analytics.
+      - name: Build app-prod
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile.prod
+          tags: hub/${{ env.SERVICE }}-app-prod:${{ github.sha }}
+          load: true
+          build-args: |
+            NEXT_PUBLIC_GA_ID=G-LE74ZXQJ68
+          cache-from: type=gha,scope=app-prod
+          cache-to: type=gha,mode=max,scope=app-prod
+
+      - name: Send to Hub and deploy
+        env:
+          HUB_DEPLOY_KEY: ${{ secrets.HUB_DEPLOY_KEY }}
+          HUB_HOST: ${{ secrets.HUB_HOST }}
+          HUB_KNOWN_HOSTS: ${{ secrets.HUB_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$HUB_DEPLOY_KEY" > ~/.ssh/hub && chmod 600 ~/.ssh/hub
+          printf '%s\n' "$HUB_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          images=$(docker image ls "hub/$SERVICE-*" --format '{{.Repository}}:{{.Tag}}' | grep ":$GITHUB_SHA$")
+          echo "images : $images"
+          # Fichier puis vérification : un docker save sur un tube peut sortir une archive tronquée.
+          docker save -o /tmp/images.tar $images
+          tar -tf /tmp/images.tar manifest.json >/dev/null
+          zstd -T0 -3 -q /tmp/images.tar -o /tmp/images.tar.zst
+          ssh -i ~/.ssh/hub -o IdentitiesOnly=yes -o BatchMode=yes "deploy@$HUB_HOST" deploy "$SERVICE" "$GITHUB_SHA" < /tmp/images.tar.zst

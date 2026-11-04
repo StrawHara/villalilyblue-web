@@ -19,9 +19,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+      args:
+        NEXT_PUBLIC_GA_ID: ${NEXT_PUBLIC_GA_ID:-}
     container_name: villalilyblue-prod
     ports:
       - "8166:3000"
+    # Config d'exécution (SMTP du formulaire de contact). Le .env n'est plus copié dans l'image.
+    env_file:
+      - .env
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
